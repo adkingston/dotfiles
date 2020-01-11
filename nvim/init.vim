@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/vim-commentary'
+Plug 'preservim/nerdcommenter'
 
 " golang
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -29,24 +30,15 @@ Plug 'tpope/vim-fugitive'
 let g:palenight_terminal_italics=1
 
 " airline theme
-let g:airline_theme='wombat'
+let g:airline_theme='tomorrow'
 let g:airline_extensions_branch_enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extentions_tabline_left_sep = ' '
 let g:airline_extensions_tabline_formatter = 'jsformatter'
 let g:airline_extensions_tabline_enabled = 1
 
-let g:tmuxline_theme = 'iceberg'
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'b'    : '#W',
-      \'win'    : '#I #W',
-      \'cwin' : '#I #W',
-      \'y'    : '#(date)',
-      \'z'    : '#(echo site5.sp.swarm)'}
 call plug#end()
 
 "---------------------------------------------------------------------------------------------------
@@ -98,7 +90,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use U to show documentation in preview window
-nnoremap <silent> U :call <SID>show_documentation()<CR>
+
+let mapleader = ","
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -170,4 +163,5 @@ nnoremap <M-r> :GoRename<cr>
 nnoremap <M-e> :GoIfErr<cr>
 nnoremap <M-k> :GoKeyify<cr>
 nnoremap <M-o> :GoDecls %:p<cr>
+
 

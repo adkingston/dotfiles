@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/project/idcs-core/web/demo-interview-client'
-let g:netrw_dirhist_2='/root/.config/nvim'
-let g:netrw_dirhist_3='/home/project/idcs-core'
