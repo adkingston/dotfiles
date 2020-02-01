@@ -1,6 +1,6 @@
 call plug#begin(stdpath('data').'/plugged')
 " color
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'arcticicestudio/nord-vim'
 
 " guid control
 Plug 'webdevel/tabulous'
@@ -27,10 +27,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 
-let g:palenight_terminal_italics=1
 
 " airline theme
-let g:airline_theme='tomorrow'
+let g:airline_theme='nord'
 let g:airline_extensions_branch_enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extentions_tabline_left_sep = ' '
@@ -46,7 +45,7 @@ call plug#end()
 "---------------------------------------------------------------------------------------------------
 set termguicolors 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme palenight
+colorscheme nord
 hi Normal guibg=NONE ctermbg=NONE
 
 "  " coc.nvim default settings

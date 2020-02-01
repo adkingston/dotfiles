@@ -177,7 +177,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # lock screen
-bindsym $mod+shift+x exec betterlockscreen -l dim 
+bindsym $mod+shift+x exec dm-tool lock
 
 # configure gaps and the like
 for_window [class="^.*"] border pixel 1
@@ -188,5 +188,5 @@ gaps outer 10
 
 # set desktop background with custom effect
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id betterlockscreen -w dim
 exec_always xcompmgr  
+exec_always feh --bg-fill ~/Downloads/wallpaper.jpg
