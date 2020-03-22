@@ -4,16 +4,12 @@ tls	on
 tls_trust_file	/etc/ssl/certs/ca-certificates.crt
 logfile	~/.config/msmtp/msmtp.log
 
-
-
-
 account primary
 host smtp.gmail.com
 port 587
 from adkingston@gmail.com
-user adkingston
+user adkingston@gmail.com
 passwordeval "pass mutt-wizard-primary"
-
 
 
 

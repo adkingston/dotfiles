@@ -1,0 +1,1 @@
+Mar 07 20:30:25 host=smtp.gmail.com tls=on auth=on user=adkingston@gmail.com from=adkingston@gmail.com recipients=adkingston@gmail.com mailsize=70 smtpstatus=250 smtpmsg='250 2.0.0 OK  1583631025 r127sm2986436qkf.90 - gsmtp' exitcode=EX_OK

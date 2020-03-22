@@ -2,13 +2,13 @@ call plug#begin(stdpath('data').'/plugged')
 " color
 Plug 'arcticicestudio/nord-vim'
 
-" guid control
+" gui control
 Plug 'webdevel/tabulous'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/vim-commentary'
 Plug 'preservim/nerdcommenter'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 " golang
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -20,6 +20,20 @@ Plug 'othree/yajs.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+
+" latex
+Plug 'lervag/vimtex'
+let g:tex_flavor  = 'latex'
+let g:tex_conceal = ''
+let g:vimtex_latexmk_continuous = 1
+let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_view_method = 'zathura'
+
+"python
+Lug 'davidhalter/jedi-vim'
+
+
+Plug 'neomake/neomake'
 
 " airline
 Plug 'vim-airline/vim-airline'
@@ -41,6 +55,13 @@ let g:airline_extensions_tabline_enabled = 1
 call plug#end()
 
 "---------------------------------------------------------------------------------------------------
+"   " latex
+"---------------------------------------------------------------------------------------------------
+
+" When writing a buffer (no delay).
+call neomake#configure#automake('w')
+
+"---------------------------------------------------------------------------------------------------
 "   " color scheme
 "---------------------------------------------------------------------------------------------------
 set termguicolors 
@@ -48,6 +69,15 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme nord
 hi Normal guibg=NONE ctermbg=NONE
 
+
+"---------------------------------------------------------------------------------------------------
+"   " spell check
+"---------------------------------------------------------------------------------------------------
+set spelllang=en
+
+autocmd FileType tex :set spell
+autocmd FileType tex :VimtexCompile
+"---------------------------------------------------------------------------------------------------
 "  " coc.nvim default settings
 "  -------------------------------------------------------------------------------------------------
 " if hidden is not set, TextEdit might fail.
@@ -163,4 +193,7 @@ nnoremap <M-e> :GoIfErr<cr>
 nnoremap <M-k> :GoKeyify<cr>
 nnoremap <M-o> :GoDecls %:p<cr>
 
-
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$

@@ -2,19 +2,26 @@
 # muttrc file for account primary
 set realname = "Alexander Kingston"
 set from = "adkingston@gmail.com"
-set sendmail = "msmtp -a primary"
+set sendmail = "/usr/local/bin/msmtp -a primary"
 alias me Alexander Kingston <adkingston@gmail.com>
-set folder = "/home/alexander/.local/share/mail/primary"
+set folder = "imaps://adkingston@gmail.com@imap.gmail.com:993"
+set imap_user = "adkingston@gmail.com"
 set header_cache = /home/alexander/.cache/mutt-wizard/primary/headers
 set message_cachedir = /home/alexander/.cache/mutt-wizard/primary/bodies
+set imap_pass = "`pass mutt-wizard-primary`"
+
+set smtp_pass = "`pass mutt-wizard-primary`"
+set smtp_url = "smtps://adkingston@gmail.com@smtp.gmail.com:465/"
+
 set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
 
 bind index,pager gg noop
 bind index,pager g noop
 bind index,pager M noop
 bind index,pager C noop
 bind index gg first-entry
-macro index o "<shell-escape>mailsync -V primary<enter>" "run mbsync to sync primary"
 unmailboxes *
 
 set spoolfile = "+INBOX"

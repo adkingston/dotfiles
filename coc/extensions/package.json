@@ -1,1 +1,8 @@
-{"dependencies":{}}
+{
+  "dependencies": {
+    "coc-json": ">=1.2.5",
+    "coc-python": ">=1.2.9",
+    "coc-texlab": ">=1.10.0",
+    "coc-vimtex": ">=1.0.2"
+  }
+}
