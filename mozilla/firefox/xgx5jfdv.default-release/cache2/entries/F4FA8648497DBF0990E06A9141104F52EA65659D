@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="/data/css/default.css" title="Hohe Qualit&#xE4;t" />
+	<link rel="shortcut icon" href="/data/img/icon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="icon" href="/data/img/icon.png" type="image/png" />
+	<title>Syntax-K ‚Äì Know-How f√ºr Ihr Projekt - Table Editor And Planner, Or: Teapot!</title>
+</head>
+<body>
+	<h1 id="logo"><a href="/">Syntax-K</a></h1>
+	<h2 id="subtitle">Know-How f√ºr Ihr Projekt</h2>
+	<div id="menu"><a xmlns="" href="/arbeitsfelder" class="sm-nav"> Arbeitsfelder </a><a xmlns="" href="/projekte/" class="sm-nav current"> Projekte </a><a xmlns="" href="/dokumentationen/" class="sm-nav"> Dokumentationen </a><a xmlns="" href="/firmenprofil" class="sm-nav"> Firmenprofil </a><a xmlns="" href="/partner" class="sm-nav"> Partner </a><a xmlns="" href="/impressum" class="sm-nav"> Impressum </a></div>
+    <div id="content">
+	<h1>Table Editor And Planner, Or: Teapot!</h1>
+
+	<p>Teapot is a compact spreadsheet software originally	written by <a href="http://www.moria.de/~michael/">Michael Haardt</a>.
+	It features a (n)curses-based text terminal interface, and recently also a <a href="http://www.fltk.org">FLTK</a>-based GUI.</p>
+
+	<p>These days, it may seem pointless having yet another spreadsheet program (and one that doesn't even know how to load
+	Microsoft Excel files). Its compact size (130k for the ncurses executable, 140k for the GUI executable, 300k for the self-contained Windows EXE) and the fact that
+	it can run across serial lines and SSH sessions make it an interesting choice for embedded applications and as system
+	administration utility, even more so since it has a batch processing mode and comes with example code for creating
+	graphs from data sets.</p>
+
+	<p>Another interesting feature is its modern approach to spread sheet theory: It sports true three-dimensional tables and
+	iterative expressions. And since it breaks compatibility with the usual notions of big spreadsheet packages, it can also
+	throw old syntactic cruft over board which many spreadsheets still inherit from the days of VisiCalc on ancient CP/M systems.</p>
+
+	<h2>Features</h2>
+
+	<p>Here are some functional features in more detail:</p>
+
+	<dl>
+
+	<dt>Cell Syntax</dt>
+	<dd>Instead of the unflexible and complicated syntax used to address the values of cells in traditional spread sheets ("<tt>B1</tt>" or "<tt>R1C2</tt>"),
+	teapot uses for a more functional approach: "<tt>@(1,2,0)</tt>".
+	This results in an easily understandable syntax and despite the very few basic functions, very powerful semantics.</dd>
+
+	<dt>Relative References</dt>
+	<dd>As a direct result of this, instead of rewriting expressions during every operation that might alter references, and
+	thus guessing user intentions and requiring awkward hacks like the "<tt>$A$1</tt>" syntax, references to other cells can be relative
+	or via named cells: "<tt>@(x()-1, y(), z())</tt>", "<tt>@(NamedCell)</tt>", or even "<tt>@(x(TotalCost), y(Paper), z(IT_Department))</tt>"</dd>
+
+	<dt>Formula References</dt>
+	<dd>Formulas can be referenced directly via the "<tt>eval(...)</tt>" function instead of the usual copy-paste routine. By referencing a
+	"mother formula" explicitly, changes and corrections to that formula are automatically propagated throughout the sheet.</dd>
+
+	<dt>Three Dimensions</dt>
+	<dd>In traditional flat spread sheets, you have to have the ability of hiding columns or rows to hide intermediate results.
+	This indicates that two dimensions are not enough, which is why teapot is three-dimensional. The third dimension can be
+	imagined like multiple layers on top of each other, usable without the awkwardness of multiple worksheets in established
+	spreadsheet software.</dd>
+
+	<dt>Type-Safety</dt>
+	<dd>Unlike many other spread sheets, all values have a type, and all operations and functions check types. As a conclusion,
+	adding a decimal number and a string will result in an error, instead of an (probably unwanted) result. This makes error
+	detection much easier.</dd>
+
+	<dt>Iterative Expressions</dt>
+	<dd>teapot offers very comfortable iterative expressions, modelled after the clocked expressions in the current PhD work of
+	J√∂rg Wittenberger at the University of Technology in Dresden, Germany. These expressions solve problems with circular
+	dependencies in traditional spreadsheets and allow completely new algorithms and uses. In effect, these make teapot
+	turing-complete. The proof is shipped as an example file, an implementation of
+	<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.</dd>
+
+	<dt>Multiple UIs</dt>
+	<dd>teapot offers several flexible and functionally equivalent user interfaces: A text mode interface using the standard (n)curses
+	library, a modern graphical user interface using the light-weight FLTK library, and a batch processing mode for scripted calculations.</dd>
+
+	<dt>Platform-Independent File Format</dt>
+	<dd>The spread sheet file format is defined using XDR (External Data Representation as used by Sun RPC), which makes sure it is
+	portable accross machines, especially regarding floating-point representations which may differ from system to system. XDR ensures
+	that number format conversion errors are minimized. Due to this, usually no rounding or truncation is needed.</dd>
+
+	<dt>Legacy File Formats</dt>
+	<dd>Several additional file formats are supported: a custom, portable ASCII file format to ease automatic generation of sheets by
+	shell scripts, standard CSV, SpreadsheetCalculator SC and Lotus 1-2-3 WK1 format. Microsoft Excel .xls and OpenDocument .ods are yet missing, but WK1
+	should allow data transfer including formulas.</dd>
+
+	<dt>Extensibility</dt>
+	<dd>teapot can easily be extended by new functions in C. Instead of just adding all functions offered by other spread sheets, as few as
+	possible were implemented as canonical as possible. So, if a function is lacking, it means that so far nobody needed it or there is a more
+	general way to solve the problem. Don't hesitate to send me email to solve such issues.</dd>
+
+	<dt>Internationalization</dt>
+	<dd>teapot can be internationalized and comes with English, Dutch, German and Polish message catalogs.</dd>
+
+	<dt>Interoperability</dt>
+	<dd>Where possible, the KISS (Keep It Simple, Stupid) principle and the UNIX philosophy of "do one thing, and do it well" is employed. That
+	means, instead of exporting every known format on earth, doing any task remotely related to spreadsheet calculation, there are interfaces
+	to troff/tbl,  L<sup>A</sup>T<sub>E</sub>X, HTML and CSV which are well-suited for further processing, be it graphing, typesetting,
+	accounting or anything else.</dd>
+
+	</dl>
+
+	<h2>Requirements</h2>
+
+	<p>teapot is portable and doesn't depend on exotic libraries. It's quite probable that all dependencies
+	are already available on your system:</p>
+
+	<ul>
+		<li>The Sun XDR library. It usually comes with the base operating system of modern UNIX variants, as part of the Sun-RPC subsystem. For
+		example, the GNU C Library (glibc) includes the neccessary files. For Win32, <a href="http://people.redhat.com/~rjones/portablexdr/">Portable XDR</a>
+		is a compact implementation.</li>
+		<li>Floating-point math, or an equivalent emulation. Usually only an issue for embedded devices.</li>
+		<li>For the console version: A curses compatible library like ncurses or pdcurses</li>
+		<li>UTF-8 in the console needs libncursesw, i.e. a moderately recent ncurses, and a UTF-8 locale setting.</li>
+		<li>A build environment supported by <a href="http://www.cmake.org">CMake</a></li>
+		<li>If you want the graphical user interface: A C++ compiler and the FLTK library, version 1.3.</li>
+	</ul>
+
+	<h2>Downloads / Version History</h2>
+
+	<dl>
+
+	<dt><a href="teapot-2.3.0.tar.gz">Version 2.3.0</a>, 2012-02-06
+	[<a href="teapot-2.3.0.tar.gz">Source</a>][x86: <a href="Teapot-2.3.0-Linux-i386.tar.gz">Tar</a>|<a href="Teapot-2.3.0-Linux-i386.deb">DEB</a>|<a href="Teapot-2.3.0-Linux-i386.rpm">RPM</a>]
+	[x86_64: <a href="Teapot-2.3.0-Linux-x86_64.deb">DEB</a>|<a href="Teapot-2.3.0-Linux-x86_64.rpm">RPM</a>]
+	[Win32:  <a href="Teapot-2.3.0-win32.exe">Installer</a>|<a href="Teapot-2.3.0-win32.zip">ZIP</a>|<a href="Teapot-2.3.0-win32-minimal.exe">standalone minimal EXE</a>]</dt>
+	<dd>Bug fixes, usability enhancements.</dd>
+
+	<dt><a href="teapot-2.2.1.tar.gz">Version 2.2.1</a>, 2012-01-16
+	[<a href="teapot-2.2.1.tar.gz">Source</a>][x86: <a href="Teapot-2.2.1-Linux-x86.deb">DEB</a>|<a href="Teapot-2.2.1-Linux-x86.rpm">RPM</a>]
+	[x86_64: <a href="Teapot-2.2.1-Linux-x86_64.deb">DEB</a>|<a href="Teapot-2.2.1-Linux-x86_64.rpm">RPM</a>]
+	[Win32:  <a href="Teapot-2.2.1-win32.exe">Installer</a>|<a href="Teapot-2.2.1-win32.zip">ZIP</a>|<a href="Teapot-2.2.1-win32-minimal.exe">standalone minimal EXE</a>]</dt>
+	<dd>Bug fixes, Font styles.</dd>
+
+	<dt><a href="teapot-2.2.0.tar.gz">Version 2.2.0</a>, 2010-10-04
+	[<a href="teapot-2.2.0.tar.gz">Source</a>][x86: <a href="Teapot-2.2.0-Linux-x86.tar.gz">Tar</a>|<a href="Teapot-2.2.0-Linux-x86.deb">DEB</a>|<a href="Teapot-2.2.0-Linux-x86.rpm">RPM</a>]
+	[x86_64: <a href="Teapot-2.2.0-Linux-x86_64.tar.gz">Tar</a>|<a href="Teapot-2.2.0-Linux-x86_64.deb">DEB</a>|<a href="Teapot-2.2.0-Linux-x86_64.rpm">RPM</a>]
+	[Win32:  <a href="Teapot-2.2.0-win32.exe">Installer</a>|<a href="Teapot-2.2.0-win32.zip">ZIP</a>|<a href="Teapot-2.2.0-win32-minimal.exe">standalone minimal EXE</a>]</dt>
+	<dd>UTF-8 support.</dd>
+
+	<dt><a href="teapot-2.1.0.tar.gz">Version 2.1.0</a>, 2010-09-30
+	[x86: <a href="Teapot-2.1.0-Linux-x86.tar.gz">Tar</a>|<a href="Teapot-2.1.0-Linux-x86.deb">DEB</a>|<a href="Teapot-2.1.0-Linux-x86.rpm">RPM</a>]
+	[x86_64: <a href="Teapot-2.1.0-Linux-x86_64.tar.gz">Tar</a>|<a href="Teapot-2.1.0-Linux-x86_64.deb">DEB</a>|<a href="Teapot-2.1.0-Linux-x86_64.rpm">RPM</a>]
+	[Win32:  <a href="Teapot-2.1.0-win32.exe">Installer</a>|<a href="Teapot-2.1.0-win32-minimal.exe">standalone minimal EXE</a>]</dt>
+	<dd>New build system, improved documentation, Win32 portability.</dd>
+
+	<dt><a href="teapot-2.0.2.tar.gz">Version 2.0.2</a></dt>
+	<dd>Improved low-resource builds, support linking without GUI help browser.</dd>
+
+	<dt><a href="teapot-2.0.1.tar.gz">Version 2.0.1</a></dt>
+	<dd>Improved cell editing for FLTK interface, now supports inserting values from/pointers to other cells via mouse or keyboard.
+	Fixed one crash, a few other bugs and quirks.</dd>
+
+	<dt><a href="teapot-2.0.tar.gz">Version 2.0</a></dt>
+	<dd>Dumped GTK+ code in favour of FLTK. Faster, smaller, easier to understand and less buggy. Fixed a few other bugs and quirks.</dd>
+
+	<dt><a href="teapot-1.9.tar.gz">Version 1.9</a></dt>
+	<dd>Inital GTK+ support, mostly complete and usable, but with a few caveats, thus considered beta quality.</dd>
+
+	<dt><a href="teapot-1.09.tar.gz">Version 1.09</a></dt>
+	<dd>Last version written and maintained by Michael Haardt.</dd>
+
+	</dl>
+
+	<h2>License</h2>
+
+	<p>teapot is distributed under the terms of the GNU General Public License (GPL) Version 3.</p>
+
+</div>
+	<p style="height: 3em;"></p>
+  </body>
+</html>
+•í X      ^‘Q^‘QAªv^‘Q   )    :https://www.syntax-k.de/projekte/teapot/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 01 Jun 2020 00:51:25 GMT
+Content-Length: 11287
+Content-Type: text/html; charset=UTF-8
+X-Clacks-Overhead: GNU Terry Pratchett
+Age: 0
+Accept-Ranges: bytes
+ original-response-headers Date: Mon, 01 Jun 2020 00:51:25 GMT
+Content-Length: 11287
+Content-Type: text/html; charset=UTF-8
+X-Clacks-Overhead: GNU Terry Pratchett
+Age: 0
+Accept-Ranges: bytes
+Connection: keep-alive
+ ctid 1 uncompressed-len 0 predictor::resource-count 7 predictor::https://www.syntax-k.de/data/css/default.css 1,1,1590972685,4097 net-response-time-onstart 576 net-response-time-onstop 625 predictor::https://www.syntax-k.de/data/img/logo_bg.png 1,1,1590972685,4096 predictor::https://www.syntax-k.de/data/img/logo_right.png 1,1,1590972685,4096 predictor::https://www.syntax-k.de/data/img/logo.png 1,1,1590972685,4096 predictor::https://www.syntax-k.de/data/img/logo_left.png 1,1,1590972685,4096 predictor::https://www.syntax-k.de/data/img/menu.png 1,1,1590972685,4096 predictor::https://www.syntax-k.de/data/img/white.png 1,1,1590972685,4096   ,

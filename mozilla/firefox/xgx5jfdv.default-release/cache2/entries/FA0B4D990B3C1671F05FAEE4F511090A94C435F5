@@ -1,0 +1,431 @@
+/**
+ * attention - this function needs to be retired
+ * as it cannot accurately give url to the media file
+ */
+var mediaUrl = function (resource) {
+    return askbot.settings.static_url + 'default' + '/' + resource;
+};
+
+var getCookie = function (name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = $.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                return decodeURIComponent(cookie.substring(name.length + 1));
+            }
+        }
+    }
+    return cookieValue;
+};
+
+var csrfSafeMethod = function(method) {
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+};
+
+var sameOrigin = function(url) {
+    var host = document.location.host;
+    var protocol = document.location.protocol;
+    var sr_origin = '//' + host;
+    var origin = protocol + sr_origin;
+    return (
+        (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+        (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+        !(/^(\/\/|http:|https:).*/.test(url))
+
+    );
+};
+
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+            // Send the token to same-origin, relative URLs only.
+            // Send the token only if the method warrants CSRF protection
+            // Using the CSRFToken value acquired earlier
+            var csrfCookieName = askbot['settings']['csrfCookieName'];
+            xhr.setRequestHeader("X-CSRFToken", getCookie(csrfCookieName));
+        }
+    }
+});
+
+
+/**
+ * Selects template by class
+ * template selector must be a simple class selector
+ * e.g. .comment
+ */
+var getTemplate = function (templateSelector) {
+    var templates = $('.js-templates');
+    return templates.find(templateSelector).clone(false);
+};
+
+var cleanUrl = function (url) {
+    var re = new RegExp('//', 'g');
+    return url.replace(re, '/');
+};
+
+var copyAltToTitle = function (sel) {
+    sel.attr('title', sel.attr('alt'));
+};
+
+/**
+ * @returns jQuery with same content and classes,
+ * but different tag name (DOM node name)
+ */
+var setHtmlTag = function (fromElement, toTagName) {
+    if (fromElement.attr('tagName') === toTagName.toUpperCase()) {
+        return fromElement;
+    }
+    var newElement = $('<' + toTagName + '></' + toTagName + '>');
+    //copy classes
+    newElement.attr('class', fromElement.attr('class'));
+    //move contents
+    fromElement.children().detach().appendTo(newElement);
+    //@todo: maybe copy event handlers
+    //if element is in dom, insert new element and detach old element
+    if ($(document).find(fromElement)) {
+        fromElement.after(newElement);
+        fromElement.remove();
+    }
+    return newElement;
+};
+
+var animateHashes = function () {
+    var id_value = window.location.hash;
+    if (id_value !== '') {
+        var previous_color = $(id_value).css('background-color');
+        $(id_value).css('backgroundColor', '#FFF8C6');
+        $(id_value)
+            .animate({backgroundColor: '#ff7f2a'}, 500)
+            .animate({backgroundColor: '#FFF8C6'}, 500, function () {
+                $(id_value).css('backgroundColor', previous_color);
+            });
+    }
+};
+
+var addExtraCssClasses = function (element, setting) {
+    if (askbot.css && askbot.css[setting]) {
+        element.addClass(askbot.css[setting]);
+    }
+};
+
+/**
+ * @param {string} id_token - any token
+ * @param {string} unique_seed - the unique part
+ * @returns {string} unique id that can be used in DOM
+ */
+var askbotMakeId = function (id_token, unique_seed) {
+    return id_token + '-' + unique_seed;
+};
+
+var getNewUniqueInt = function () {
+    var num = askbot.data.uniqueInt || 0;
+    num = num + 1;
+    askbot.data.uniqueInt = num;
+    return num;
+};
+
+/**
+ * generic tag cleaning function, settings
+ * are from askbot live settings and askbot.const
+ */
+var cleanTag = function (tag_name, settings) {
+    var tag_regex = new RegExp(settings.tag_regex);
+    if (tag_regex.test(tag_name) === false) {
+        var firstChar = tag_name.substring(0, 1);
+        if (settings.tag_forbidden_first_chars.indexOf(firstChar) > -1) {
+            throw settings.messages.wrong_first_char;
+        } else {
+            throw settings.messages.wrong_chars;
+        }
+    }
+
+    var max_length = settings.max_tag_length;
+    if (tag_name.length > max_length) {
+        throw interpolate(
+            ngettext(
+                'must be shorter than %(max_chars)s character',
+                'must be shorter than %(max_chars)s characters',
+                max_length
+            ),
+            {'max_chars': max_length },
+            true
+        );
+    }
+    if (settings.force_lowercase_tags) {
+        return tag_name.toLowerCase();
+    } else {
+        return tag_name;
+    }
+};
+
+
+var getSingletonController = function (ControllerClass, name) {
+    askbot.controllers = askbot.controllers || {};
+    var controller = askbot.controllers[name];
+    if (controller === undefined) {
+        controller = new ControllerClass();
+        askbot.controllers[name] = controller;
+    }
+    return controller;
+};
+
+var setController = function (controller, name) {
+    askbot.controllers = askbot.controllers || {};
+    askbot.controllers[name] = controller;
+};
+
+var sortChildNodes = function (node, cmpFunc) {
+    var items = node.children().sort(cmpFunc);
+    node.append(items);
+};
+
+var getUniqueValues = function (values) {
+    var uniques = {};
+    var out = [];
+    $.each(values, function (idx, value) {
+        if (!(value in uniques)) {
+            uniques[value] = 1;
+            out.push(value);
+        }
+    });
+    return out;
+};
+
+var getUniqueWords = function (value) {
+    var words = $.trim(value).split(/\s+/);
+    return getUniqueValues(words);
+};
+
+/**
+ * comma-joins items and uses "and'
+ * between the last and penultimate items
+ * @param {Array<string>} values
+ * @return {string}
+ */
+var joinAsPhrase = function (values) {
+    var count = values.length;
+    if (count === 0) {
+        return '';
+    } else if (count === 1) {
+        return values[0];
+    } else {
+        var last = values.pop();
+        var prev = values.pop();
+        return values.join(', ') + prev + ' ' + gettext('and') + ' ' + last;
+    }
+};
+
+/**
+ * @return {boolean}
+ */
+var inArray = function (item, itemsList) {
+    for (var i = 0; i < itemsList.length; i++) {
+        if (item === itemsList[i]) {
+            return true;
+        }
+    }
+    return false;
+};
+
+var showMessage = function (element, msg, where) {
+    var div = $('<div class="vote-notification"><h3>' + msg + '</h3>(' +
+    gettext('click to close') + ')</div>');
+    where = where || 'parent';
+
+    div.click(function (event) {
+        $('.vote-notification').fadeOut('fast', function () { $(this).remove(); });
+        return false;
+    });
+
+    if (where === 'parent') {
+        element.parent().append(div);
+    } else {
+        element.after(div);
+    }
+
+    div.fadeIn('fast');
+};
+
+//outer html hack - https://github.com/brandonaaron/jquery-outerhtml/
+(function ($) {
+    var div;
+    $.fn.outerHTML = function () {
+        var elem = this[0],
+        tmp;
+        return !elem ? null
+        : typeof (tmp = elem.outerHTML) === 'string' ? tmp
+        : (div = div || $('<div/>')).html(this.eq(0).clone()).html();
+    };
+})(jQuery);
+
+/**
+ * @return {number} key code of the event or `undefined`
+ */
+var getKeyCode = function (e) {
+    if (e.which) {
+        return e.which;
+    } else if (e.keyCode) {
+        return e.keyCode;
+    }
+    return undefined;
+};
+
+var makeKeyHandler = function (key, callback) {
+    return function (e) {
+        if ((e.which && e.which === key) || (e.keyCode && e.keyCode === key)) {
+            if (!e.shiftKey) {
+                callback(e);
+                return false;
+            }
+        }
+    };
+};
+
+
+var setupButtonEventHandlers = function (button, callback) {
+    button.keydown(makeKeyHandler(13, callback));
+    button.click(callback);
+};
+
+var removeButtonEventHandlers = function (button) {
+    button.unbind('click');
+    button.unbind('keydown');
+};
+
+var decodeHtml = function (encodedText) {
+    return $('<div/>').html(encodedText).text();
+};
+
+var putCursorAtEnd = function (element) {
+    var el = $(element).get()[0];
+    var jEl = $(el);
+    if (el.setSelectionRange) {
+        var len = jEl.val().length * 2;
+        el.setSelectionRange(len, len);
+    } else {
+        jEl.val(jEl.val());
+    }
+    jEl.scrollTop(999999);
+};
+
+var setCheckBoxesIn = function (selector, value) {
+    return $(selector + '> input[type=checkbox]').attr('checked', value);
+};
+
+/*
+ * Old style notify handler
+ */
+var notify = (function () {
+    var visible = false;
+    return {
+        show: function (html, autohide) {
+            if (html) {
+                $('body').addClass('user-messages');
+                var par = $('<p class="notification"></p>');
+                par.html(html);
+                $('.notify').prepend(par);
+            }
+            $('.notify').fadeIn('slow');
+            visible = true;
+            if (autohide) {
+                setTimeout(
+                    function () {
+                        notify.close(false);
+                        notify.clear();
+                    },
+                    3000
+                );
+            }
+        },
+        clear: function () {
+            $('.notify').empty();
+        },
+        close: function (doPostback) {
+            if (doPostback) {
+                $.post(
+                    askbot.urls.mark_read_message,
+                    { formdata: 'required' }
+                );
+            }
+            $('.notify').fadeOut('fast');
+            $('body').removeClass('user-messages');
+            visible = false;
+        },
+        isVisible: function () { return visible; }
+    };
+})();
+
+/* **************************************************** */
+
+/* some google closure-like code for the ui elements */
+var inherits = function (ChildCtor, ParentCtor) {
+    /** @constructor taken from google closure */
+    function TempCtor() {}
+
+    TempCtor.prototype = ParentCtor.prototype;
+    ChildCtor.superClass_ = ParentCtor.prototype;
+    ChildCtor.prototype = new TempCtor();
+    ChildCtor.prototype.constructor = ChildCtor;
+};
+
+var getSuperClass = function (cls) {
+    return cls.superClass_;
+};
+
+Mè),      ^ﬂ˛^ﬂ˛A√'N^‡ Y   7    :https://faq.i3wm.org/m/default/media/js/utils.js%3Fv=2 necko:classified 1 strongly-framed 1 security-info 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 request-method GET request-Accept-Encoding gzip, deflate, br response-head HTTP/2 200 OK
+date: Tue, 09 Jun 2020 21:24:37 GMT
+content-type: application/octet-stream
+content-length: 10483
+x-origin-cache: HIT
+last-modified: Mon, 21 Dec 2015 08:00:44 GMT
+etag: "5677b1ac-28f3"
+access-control-allow-origin: *
+expires: Tue, 09 Jun 2020 21:34:17 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 22F0:937F:43519:4D76C:5EDFFE01
+accept-ranges: bytes
+via: 1.1 varnish
+age: 20
+x-served-by: cache-bwi5030-BWI
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1591737878.785262,VS0,VE1
+vary: Accept-Encoding
+x-fastly-request-id: 81f648e67482e00eef8a9b6424d604df6dc89ddd
+cf-cache-status: DYNAMIC
+cf-request-id: 033c919d100000cf08cda93200000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: cloudflare
+cf-ray: 5a0deba818c0cf08-IAD
+X-Firefox-Spdy: h2
+ original-response-headers date: Tue, 09 Jun 2020 21:24:37 GMT
+content-type: application/octet-stream
+content-length: 10483
+x-origin-cache: HIT
+last-modified: Mon, 21 Dec 2015 08:00:44 GMT
+etag: "5677b1ac-28f3"
+access-control-allow-origin: *
+expires: Tue, 09 Jun 2020 21:34:17 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 22F0:937F:43519:4D76C:5EDFFE01
+accept-ranges: bytes
+via: 1.1 varnish
+age: 20
+x-served-by: cache-bwi5030-BWI
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1591737878.785262,VS0,VE1
+vary: Accept-Encoding
+x-fastly-request-id: 81f648e67482e00eef8a9b6424d604df6dc89ddd
+cf-cache-status: DYNAMIC
+cf-request-id: 033c919d100000cf08cda93200000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: cloudflare
+cf-ray: 5a0deba818c0cf08-IAD
+X-Firefox-Spdy: h2
+ ctid 1 net-response-time-onstart 90 net-response-time-onstop 184   (Û

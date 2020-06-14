@@ -1,0 +1,443 @@
+/* GLOBAL STYLES FOR REFERENCE DOCS
+
+   developer:   suef
+   requires:    /common/framework/css/framework.en.css
+   ========================================================================== */
+/*
+  Colors:
+
+  333     dark-grey
+  636363  medium-grey
+  848484  light-medium-grey
+  888     main heading sub-text grey
+  cacaca  grey divide
+  e7e7e7  grey divide
+  f3f3f3  lightest grey
+  0549a6  blue
+  f3fbff  lightest-blue
+  d9e5f3  border-blue
+  136eb7  badge-blue
+  7d93b0  grey-blue
+  608bab. light-grey-blue
+  f77700  hover
+  d96500  dark-orange
+  fffcb8  pale-yellow
+*/
+/* ==========================================================================
+   MAIN
+   ========================================================================== */
+*, :after, :before { box-sizing: border-box; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font: inherit; line-height: 1.2; }
+dd, dl, dt, li, ol, ul { display: block; list-style: none; }
+.main { font-family: 'Source Sans Pro', Arial, sans-serif; color: #333; margin: 0; font-size: .94rem; }
+.main p { line-height: 1.6; margin: .67rem 0; }
+.main a { color: #0549a6; text-decoration: none; }
+.main a:hover { color: #f77700; }
+sub, sup { font-size: smaller; }
+.ExLine { margin: 23px 0 21px 0; border-top: 1px solid #e7e7e7; }
+.main .inner img { vertical-align: middle; max-width: 100%; height: auto; }
+ 
+/* Bullets */
+.inlineSeparator:before, .formatIntroWrap .inlineSeparator:before, ul.functionList li:before, ul.FormatList li:before, .filter_list li:before, li.BulletedText:before, .special-character.FilledSmallSquare:before, .Notes li:before, .inlineFunctionList:before, .bullet-list li:before, ul.Text li:before
+{ content: ''; background: #adadad; width: 4px; height: 4px; display: inline-block; top: .55rem; vertical-align: top; position: absolute; margin: 0 .37rem; left: -1rem; }
+.bullet-list { margin: 0 0 1.07rem; }
+.bullet-list li { position: relative; margin: .5rem 0 .5rem 1.07rem; }
+
+/* ==========================================================================
+   HEADING title
+   ========================================================================== */
+
+.topContentWrap a[href="#DetailsAndOptions"], .topContentWrap a[href="#Examples"]{ display: none; }
+
+.sticky { z-index: 100000; max-width: 100%; position: fixed; left: 0; right: 0; top: 42px; transition: opacity .2s ease-in, height .2s ease-in; }
+.sticky .main-heading h1, .sticky .main-heading .main-title { font-size: 16px; font-weight: 600; display: inline-block; margin: 11px 0 0; font-size: 16px; top: 0; max-width: 100%; }
+.sticky .badge, .sticky .iconography, .sticky .main-title-top, .sticky .main-heading-type { display: none; }
+.sticky .main-title img { display: none; }
+
+.main-heading-wrapper.sticky { background: #e5e5e5;  height: 40px; top: 40px; }
+.sticky .main-heading { margin: 0 !important; display: inline-block; }
+.sticky .topContentWrap { margin: 7px 0 0; display: inline-block; float: right; }
+.main-heading-wrapper .inner { margin: 0 auto; }
+.main-heading-wrapper.sticky .inner { max-width: 1175px; padding: 0 12px; }
+
+.main-heading { position: relative; margin: 11px 0 16px; }
+.format .main-heading { margin: 11px 0 9px; }
+.main-heading:after { clear:both; content: ''; display: block; }
+.main-title { font-size: 2.67rem; line-height: 1.15; font-weight: 600; margin: 2rem 0 1.07rem; display: inline-block; overflow: hidden; text-overflow: ellipsis; max-width: 95%;  }
+.entity .main-title { color: #653510; }
+.main-heading .main-title { margin: 0; }
+.c .main-title { color: #3f7f1f; }
+.menuitem .main-title img { top: -2px; position: relative; }
+.main-title.has-quotes { font-weight: 400; }
+.message .main-title { color: #dd1100; }
+.AwaitingReviewNote + .main-title, .ObsolescenceNote + .main-title { margin: 0 0 1.07rem; }
+.FullListing { vertical-align: top; margin: 1.6rem 0 0 .5rem; position: relative; display: inline-block; }
+/* temporary until removed from build */
+.main-heading img[src$="/1.png"] { display: none; }
+
+.main-heading-wrapper:not(.sticky) .main-title { padding: 0.2rem; border-radius: .2rem; margin: 0 0 0 -.2rem; }
+.clipboard-inline.main-title:hover, .clipboard-inline.main-title:focus { box-shadow: 0 0 0.12rem #444; background: transparent; }
+.clipboard-inline.main-title:active { box-shadow: 0 0 0.25rem #04b000 }
+
+.main-heading-type { color: #848484; font-size: 1.6rem; white-space: nowrap; font-weight: 400; }
+.blockchain .main-heading-type { font-size: 2.3rem; padding: 0 0 0 .5rem; }
+
+.ContextNameCell { display: none; }
+.quote { color: #848484; font-weight: 300; }
+p.subheading { color: #888; font-weight: 300; font-size: 1.2rem; margin: -1rem 0 0 .95rem; position: relative; }
+
+.highlighting { background: #fffcb8; }
+.highlighting .changes { display: none; }
+.highlighting .hide-changes { display: block; }
+
+/* ==========================================================================
+   FUNCTION INTRO
+   ========================================================================== */
+.functionIntroWrap { padding: 1rem 0px; background: #f3fbff; margin: 0 0 1.07rem; border: 2px solid #d9e5f3; }
+.functionIntro { border-bottom: 1px solid #d9e5f3; margin: 0 1.64rem; padding: .87rem 0; }
+.functionIntro:last-child { border-bottom: 0; padding: .7rem 0; }
+.functionIntro .code { margin: 0; line-height: 1.1; position: relative; display: inline-block; padding: .2rem; }
+.function .functionIntro .code:hover, .function .functionIntro .code:focus { background: #fff; box-shadow: 0 0 0.12rem #444; border-radius: 0; }
+.function .functionIntro .code:active { box-shadow: 0 0 0.25rem #04b000 }
+.functionIntro .code a { font-size: 1.07rem; }
+.functionIntro .code-description { margin: 0 0 0 1.07rem; font-size: .97rem; line-height: 1.3; }
+.functionIntro .TI { font-size: 1rem; padding: 0 0 0 .08rem; }
+sub .TI, sup .TI, .functionIntro sub .TI, .functionIntro sup .TI { font-size: .8rem; }
+
+.c .functionIntroWrap, .non-wl .functionIntroWrap { background: #f8fffa; border-color: #dcebd1; }
+
+.character .functionIntro table { margin: 0; width: 100%; }
+.character .functionIntroWrap { background: #f3f3f3; padding: 1.37rem 1.87rem; border: 0; margin: 0 0 2.2rem; }
+.character .functionIntroWrap .functionList { margin: 0; padding: 0; }
+
+.device .functionIntroWrap { margin: 0 .3rem 1.07rem; }
+.device #DeviceDescription { padding: 0 2.1rem .7rem; }
+.device #DeviceDescription li { margin: 0; }
+.device #DeviceDescription li:before { margin: 0; left: -.8rem; }
+.device section .functionIntroWrap { border-width: 1px; padding: 0; }
+.device section .functionIntro  { margin: 0 1rem; padding: .8rem 0; }
+
+.entity .functionIntroWrap { background: #fefaee; border-color: #f9d398; }
+.entity .functionIntro { border-color: #f9d398; }
+
+.character-img { width: 23%; padding: 0 1rem 0 0; }
+.character-img img { max-width :100%; }
+.MenuName a { color: #545454; font-weight: 600; }
+.functionIntroWrap .MenuName { font-weight: 600; }
+
+.indicatorIntro { line-height: 2.3; margin: 0 0 .45rem; }
+.formatIntro { color: #636363; font-size: 1.2rem; font-weight: 300; font-style: italic; display: inline-block; }
+
+
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+section { margin: 1.5rem 0; }
+.main section:last-of-type { padding: .82rem 0; }
+.main section:last-of-type h1.toggle { padding: 8px 2px !important; }
+.main section#DetailsAndOptions:last-of-type { padding: .82rem 0; }
+.sticky.smaller-title .main-heading { width: 77%; display: table; table-layout: fixed; height: 38px; }
+.sticky.smaller-title .main-title { display: table-cell; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 14px; vertical-align: middle; }
+.sticky .formatIntroWrapper { display: none; }
+.main-title ~ section, .main-heading-wrapper ~ section { margin: .75rem auto; }
+.main-title ~ section h1, .main-heading-wrapper ~ section h1 { border-top: 1px solid #cacaca; padding-top: .84rem; }
+
+.function-wrapper .inner, .modified-wrapper .inner, .feedback-wrapper .inner { border-top: 0; }
+section:first-of-type { margin: 1.07rem 0 0; }
+.main-title + section, .main-heading + section { margin: 1.5rem auto 0; padding: 0; }
+.functionIntroWrap + section, .FormatList + section, .formatIntroWrap + section,
+.function-wrapper + section h1, .FormatList + section h1, .formatIntroWrap + section h1 { border-top: 0; margin: 0; }
+.format-wrapper + #DetailsAndOptions { margin: 1.5rem 0 0; }
+
+section + #SeeAlso { margin: .75rem 0 0; }
+section h1 { color: #8b8b8b; margin: 0; font-size: 1.07rem; }
+
+#SeeAlso a { font-weight: 600; }
+.related-links .inner .inlineFunctionList::before { display: none; }
+
+.ServiceNotes { margin: 0 0 .5rem; }
+
+p.intro { font-size: .9rem; line-height: 1.6; color: #636363; margin: 0 0 1.3rem; }
+.service p.intro { padding: 0 0 0 .8rem; margin: 0; }
+
+section .toggle { color: #d96500; letter-spacing: .043rem; border-top: 0; padding-top: 0; position: relative; padding: .6rem .27rem; cursor: pointer; }
+  section .toggle:hover { color: #f77700; }
+section .toggle:before { content: ''; background: none; display: inline-block; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); border-left: 0; border-color: #d96500; border-width: 0 2px 2px 0; border-style: solid; width: 6px; height: 6px; left: -4px; top: -.2rem; position: relative; }
+section .toggle:hover:before { border-color: #f77700; }
+section .toggle.open:before { border-width: 0 0 2px 2px; left: -3px; top: -.25rem; }
+  section .toggle.open:hover:before { border-color: #f77700; }
+
+section h1.toggle.open { padding: 8px 2px; }
+section h1.toggle:before { content: ''; margin: 0 .33rem 0 0; vertical-align: text-bottom; left: -2px; top: -.5rem; width: 7px; height: 7px; }
+section h1.toggle:hover:before { border-color: #f77700; }
+section h1.toggle { padding: 8px 2px 0; }
+section h1.toggle.open:before { border-color: #d96500; top: -.5rem; left: 0; }
+  section h1.toggle.open:hover:before { border-color: #f77700; }
+
+section h2.toggle:before { top: -.1rem; }
+.toggle .description { font-size: .9rem; color: #575757; font-weight: 300; letter-spacing: 0; margin: 0 0 0 .3rem; }
+.toggle .description { display: none; line-height: 1.2; font-size: .9rem; font-style: italic; }
+.toggle:hover .description { display: inline-block; }
+
+section h3.toggle:before { top: -.15rem; }
+section h3.toggle.open:before { top: -.18rem; }
+
+section h4.toggle:before { content: ''; border-width: 0 1px 1px 0; margin: 0 3px 0 0; vertical-align: text-bottom; left: -3px; top: -.45rem; width: 4px; height: 4px; }
+section h4.toggle.open:before { top: -.5rem; left: -2px; border-width: 0 0 1px 1px; }
+section h5.toggle:before { content: ''; border-width: 0 1px 1px 0; margin: 0 3px 0 0; vertical-align: text-bottom; left: -3px; top: -.3rem; width: 4px; height: 4px; }
+section h5.toggle.open:before { top: -.4rem; left: -2px; border-width: 0 0 1px 1px; }
+section h6.toggle:before { content: ''; border-width: 0 1px 1px 0; margin: 0 3px 0 0; vertical-align: text-bottom; left: -3px; top: -.3rem; width: 4px; height: 4px; }
+section h6.toggle.open:before { top: -.4rem; left: -2px; border-width: 0 0 1px 1px; }
+
+section > .hideable { margin: 0 12px 2.53rem; }
+#Examples > .hideable { margin: 0 12px 2.53rem; }
+#ref h3 { color: #d96500; }
+.hideable { margin: 0 12px; display: none; position: relative; }
+.hideable .hideable { margin: 0 .73rem; }
+
+section .toggle { color: #d96500; }
+section h1.toggle { font-size: 1.18rem; }
+section h2.toggle { font-size: 1.08rem; }
+section h2 .total-examples { font-size: .7rem; }
+section h3.toggle { font-size: 1rem; padding: .18rem .13rem; }
+section h3 .total-examples { font-size: .67rem; }
+section h4.toggle { font-size: .9rem; padding: .15rem .1rem; }
+section h4 .total-examples { font-size: .64rem; }
+
+.total-examples { top: -1px; position: relative; }
+.total-examples, .open-all, .close-all { font-size: .7rem; color: #888888; font-weight: 300; }
+.open-all, .close-all { display: none; }
+.on.close-all, .on.open-all { display: inline-block; margin: 0 .7rem; top: -1px; position: absolute; cursor: pointer; padding: 0 .3rem 1px; border: 1px solid #cacaca; border-radius: 3px; left: 6rem; top: .8rem; }
+.open-all:hover, .close-all:hover { color: #fff; background: #cacaca; }
+#Examples p { font-size: .94rem; margin: .5rem 0 0; }
+h2.toggle:last-of-type { padding: .6rem .2rem .2rem .27rem; }
+
+.service h3 { color: #b46625; font-size: 1rem; margin: 1rem 0; }
+
+.format .FormatList { background: #f3f3f3; padding: .77rem  1.27rem; margin: 2.07rem 0 1.07rem; }
+.format .format-wrapper { margin: -13px 0 0 0; }
+.format .formatIntroWrap { position: relative; margin: 0 0 0 1rem; }
+.entity.format .formatIntroWrap { margin: 0; }
+.format .formatIntro td { vertical-align: top; }
+.format .FormatList li { margin: .57rem 0 .57rem 1rem; position: relative; }
+.format .SpanColumn .formatIntro, .format .lineAbove .formatIntro { width: 94%; margin: 0; font-size: .93rem; font-weight: 400; padding: 0 0 .5rem; }
+.format .SpanColumn:last-child .formatIntro { margin: 0; padding: 0 0 .2rem; }
+ul.functionList li.WeakDivider { border-top: 1px solid #ddd; margin: 0 0 0 .3rem; }
+ul.functionList li.WeakDivider:before { display: none; }
+
+.device .subheading + .formatIntroWrap { margin: 2rem 0; }
+.device .formatIntroWrap { background: #f3f3f3; padding: 1.5rem 2rem; margin: 1rem 0 2rem; }
+.device .formatIntro { font-size: 1rem; color: #333; font-weight: 400; line-height: 1.5; }
+.device .format-intro-label { color: #636363; }
+
+.main > .PlatformAvailabilityNote, .main > .DataPageEntityNote { max-width: 1000px; margin: 1rem auto; text-align: center; position: relative; padding: .5rem 3% !important; border-radius: 4px; }
+.PlatformAvailabilityNote .inner, .DataPageEntityNote .inner { display: inline-block; text-align: left; position: relative; }
+.PlatformAvailabilityNote { background: #f0f0f0; border: 1px solid #e5e5e5; }
+.DataPageEntityNote { background: #fffdf8; border: 1px solid #fce7c7; }
+
+#FunctionEssay .functionList { column-count: 2; margin: .44rem 0 0 0; }
+#FunctionEssay .functionessay { margin: 0 0 1.3rem 0; }
+
+a.hideable-close-button { color: #aaa; font-size: .7rem; display: block; position: absolute; z-index: 10; bottom: .5rem; }
+a.hideable-close-button:before { content: ''; border-top: 1px solid #aaa; border-left: 1px solid #aaa; transform: rotate(45deg); width: 6px; height: 6px; display: inline-block; top: 2px; right: 3px; position: relative; }
+a.hideable-close-button:hover:before { border-color: #f77700; }
+
+p.smallTitle { margin: 0; font-size: .9rem; color: #a4a4a4; text-transform: uppercase; }
+h2.Section { font-size: 1.5rem; color: #333; margin: 2rem 0 1rem; border-top: 1px solid #cacaca; padding: .5rem 0 0 0; font-weight: 600; }
+h3.Subsection { color: #333; font-size: 1.3rem; margin: 2rem 0 1rem; }
+h4.Subsubsection { font-size: 1rem; line-height: 1.2; font-weight: 600; color: #666; margin: 1.1rem 0 .5rem; }
+
+.howto-main-links { margin: .6rem 0; }
+
+/* ==========================================================================
+   FUNCTION LIST
+   ========================================================================== */
+ul.functionList { margin: .44rem 0 1.32rem 1.07rem; padding: 0; color: #333; }
+ul.functionList li { padding: 0; margin: .47rem 0 0 1rem; line-height: 1.4; position: relative; }
+.inlineFunctionList { position: relative; }
+
+section { position: relative; }
+section ul.functionList { margin: .44rem 0 1.32rem .82rem; }
+section ul.functionList li { margin: .3rem 0 0 1.52rem; font-size: .98rem; line-height: 1.4; }
+.service section ul.functionList { margin: .44rem 0 1.32rem 0; }
+.device section ul.functionList { margin: .44rem .8rem .5rem .8rem; }
+.device section ul.functionList li { margin: .67rem 1rem; }
+
+.hideable ul.functionList:last-child { margin: .44rem 0 0 1.07rem; }
+.hideable ul.functionList li { margin: .67rem 0; }
+.hideable ul.functionList li:last-child { margin-bottom: 0; }
+#DetailsAndOptions ul.functionList:last-of-type { margin: .44rem 0 0 1.07rem; }
+
+ul.functionList li.functionessay { margin: 0 0 1.3rem -1rem; }
+ul.functionList li.functionessay:before { display: none; }
+
+/* ==========================================================================
+   DETAILS AND OPTIONS
+   ========================================================================== */
+#DetailsAndOptions { padding: .83rem 0 0; margin: 1.5rem auto 0; }
+#DetailsAndOptions:not(.open) { margin: 1.5rem auto .5rem; }
+#DetailsAndOptions .hideable { padding: 0 0 2rem; }
+#DetailsAndOptions .open ~ .NotesThumbnails, .alternateHeader .open ~ .NotesThumbnails { display: none; }
+.NotesThumbnails { padding: .82rem; margin: .5rem 0 1rem; position: relative; position: relative; overflow: hidden; white-space: nowrap; }
+.NotesThumbnails img { width: 188px; box-sizing: content-box; padding: 0 5px 0 0; }
+.NotesThumbnails td:first-of-type { display: none; }
+
+#DetailsAndOptions:hover h1.toggle { color: #f77700; }
+#DetailsAndOptions:hover h1.toggle:before { border-color: #f77700; }
+#DetailsAndOptions:hover h1.toggle.open { color: #d96500; }
+#DetailsAndOptions:hover h1.toggle.open:before { border-color: #d96500; }
+#DetailsAndOptions h1.toggle.open:hover { color: #f77700; }
+#DetailsAndOptions h1.toggle.open:hover:before { border-color: #f77700; }
+#DetailsAndOptions h1.toggle:hover:before { border-color: #f77700; }
+
+#DetailsAndOptions:hover .NotesThumbnails:after, .alternateHeader:hover .NotesThumbnails:after { cursor: pointer; content: ''; background: #00aaff; position: absolute; top: 0; bottom: 0; right: 0; left: 0; opacity: .06; z-index: 10; }
+.c #DetailsAndOptions:hover .NotesThumbnails:after { background: #00ff2b; }
+
+#Examples { margin: 0 0 .5rem; }
+#DetailsAndOptions + #Examples { margin: 0 auto; padding: 0; }
+
+.NotesThumbnails td { padding: 1rem; }
+
+.DeviceAbstract { font-size: 1rem; margin: 1rem 0; }
+.DeviceImageCaption { font-size: .9; margin: 1rem 0; font-style: italic; }
+
+/* ==========================================================================
+   COMPATIBILITY
+   ========================================================================== */
+p.UpgradeLabel { color: #2a611a; font-weight: 600; margin: 1rem 0 0 0; }
+.UpgradeObjectName { font-size: 2.5rem; font-weight: 600; margin: 0 0 1.07rem; display: inline-block; font-family: 'Source Code Pro'; }
+.UpgradeSummary { padding: .5rem 1rem; border: 1px solid #2a611a; background: #d9f2da; }
+.LegacyVersion { color: #2a611a; width: 60px; display: inline-block; text-align: center; vertical-align: middle; }
+.LegacyInput img { vertical-align: middle; border: 1px solid #2a611a; padding: .5rem 1rem; display: inline-block; box-sizing: content-box; }
+
+/* ==========================================================================
+   ALPHABET LISTING
+   ========================================================================== */
+.AlphabetListingJumpTo + h3, .AlphabeticalListing + h3  { margin: 0; padding-top: 5px; border-top: 1px solid silver; }
+.AlphabeticalListing { margin: 0 0 1rem; }
+.AlphabetListingJumpTo { margin: 1.5rem 0 2rem; padding: 10px; background: #ededed; border: 1px solid silver; font-weight: bold; z-index: 10; }
+.AlphabetListingJumpTo a { margin: 0 10px 0 0; display: inline-block; }
+.AlphabeticalListing table { margin: .5rem 0 0; }
+.AlphabeticalListing table td { width: 218px; }
+.AlphabeticalListing table a { display:inline-block; }
+.AlphabetListingJumpTo.sticky { transition: opacity .2s ease-in, height .2s ease-in; top: 82px; margin: 0 0 1rem; }
+
+/* ==========================================================================
+   PLAY ANIMATION
+   ========================================================================== */
+.playAnimation { display: none; }
+.animation:hover { position: relative; border-radius: .33rem; }
+.animation.pause:hover .playAnimation + span:before { background-position: 0 0; }
+.animation.pause:active .playAnimation + span:before { background-position: -50px 0; }
+.animation:active .playAnimation + span:before { background-position: -50px -50px !important; }
+.animation object { display: inline-block; }
+.video { position: relative; display: block; }
+
+/* ==========================================================================
+   Awaiting Review 
+   ========================================================================== */
+.AwaitingReviewNote, .ObsolescenceNote, .main > .AwaitingReviewNote, .main > .ObsolescenceNote { margin: 0 auto 1.5rem; font-size: .9rem; max-width: 1000px; text-align: center; position: relative; padding: .5rem 3% !important; border-radius: 4px; background: #f8f8f8; border: 1px solid #dedede; padding: .7rem; }
+.topContentWrap + .ObsolescenceNote, .topContentWrap .AwaitingReviewNote { margin: 1.5rem auto; }
+.ObsolescenceNote .inner, .AwaitingReviewNote .inner { display: inline-block; text-align: left; position: relative; }
+.awaiting-review-note-inner { text-align: left; display: table-cell; }
+
+/* ==========================================================================
+   MISC
+   ========================================================================== */
+.hideable:after { content: ''; clear: both; display: block; height: 1px; }
+.toggle + .hideable { display: none; }
+.opened, .open + .hideable, .open + .open-all + .close-all + .hideable, .open + .NotesThumbnails ~ .hideable
+{ display: block !important; }
+.last { margin-bottom: 0 !important; }
+.last *:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   responsive breakpoint styles
+   ========================================================================== */
+
+/* styles for large screens (1200px)
+   ========================================================================== */
+
+@media all and (max-width: 1200px) {
+    .main { font-size: 1rem; }
+    .main #Examples p { font-size: 1rem; }
+}
+
+/* styles for medium screens (900px)
+   ========================================================================== */
+
+@media all and (max-width: 900px) {
+    .AlphabeticalListing table td { width: 100%; display: block; }
+    .header .right { width: 37% !important; }
+    .FullListing { display: block; margin: 0; }
+}
+
+/* styles for small screens (600px)
+   ========================================================================== */
+
+@media all and (max-width: 600px) {
+    .OperatorCharacter { display: inline-block; width: 25%; }
+    .OperatorCharacter img { max-width: 100%;  }
+    .format .format-wrapper { margin: 0; }
+
+    .character-img, .character-img + td { width: 100%; display: block; }
+
+    #Examples .hideable { margin: 0 0 0 .37rem; }
+    #Examples .hideable .hideable { margin: 0 0 0 .67rem; }
+    #Examples .hideable .hideable .hideable { margin: 0; }
+    /*.on.close-all, .on.open-all { left: 7rem; }*/
+    h2.toggle:hover .description { display: none; }
+    h2.toggle.open { margin: 0; }
+    h2.toggle.open .description { display: block; position: relative; margin: 0 .5rem; }
+
+    .main > section.function-wrapper { padding: 0 !important; }
+    .functionIntroWrap { position: relative; border-left: 0; border-right: 0; }
+    .device .functionList { margin: 0; }
+
+    .AlphabetListingJumpTo, .AlphabetListingJumpTo.sticky { margin: 0 10px 25px !important; }
+
+    .search { width: 100%; }
+
+    .animation:hover .playAnimation + span:before { left: -2px !important; }
+    .format .main-heading { margin: 0; }
+    .main-heading-type { font-size: 1.3rem; }
+}
+@media all and (max-width: 600px, max-height: 400px) {
+    .ExLine { margin: 2px 0 0 0; }
+    #guide .GuideDelimiter, #guide .GuideDelimiterSubsection, #guide .GuideDelimiterTop, #guide .HowToDelimiter, #guide .GuideDelimiterSubsection { margin: .7rem 0 !important;  }
+    #guide section.related-links { margin: 1rem 0 0 !important; }
+    .related-links ul.functionList li { margin: .1rem 0 !important; }
+}
+@media all and (max-width: 500px) {
+    .format .formatIntroWrap { margin: 0 0 0 .7rem; }
+}
+@media all and (max-width: 900px), (max-height: 600px) {
+    html { font-size: 14px; }
+    .main-heading { margin: 1px 0 6px; }
+    .functionIntroWrap { padding: .375rem 0; }
+    .functionIntro { margin: 0 1rem; }
+    h2.toggle:last-of-type { padding: .25rem .2rem .2rem .27rem; }
+    #Examples p { margin: .19rem 0 0; }
+    .ExLine { margin: 4px 0 2px 0; }
+    #guide .GuideDelimiter, #guide .GuideDelimiterSubsection, #guide .GuideDelimiterTop, #guide .HowToDelimiter, #guide .GuideDelimiterSubsection { margin: .9rem 0 !important;  }
+    .related-links ul.functionList li { margin: .3rem 0 !important; }
+}  j¸SÉlÓ      ^º ø^º øA«^º®ò   =    :https://reference.wolfram.com/language-assets/css/global.css necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2020 19:42:47 GMT
+ETag: "5fb6-5a0ad8eac5bc0"
+Accept-Ranges: bytes
+Content-Length: 24502
+Cache-Control: max-age=3600, public
+Content-Type: text/css
+ original-response-headers Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2020 19:42:47 GMT
+ETag: "5fb6-5a0ad8eac5bc0"
+Accept-Ranges: bytes
+Content-Length: 24502
+Cache-Control: max-age=3600, public
+Keep-Alive: timeout=2, max=99
+Connection: Keep-Alive
+Content-Type: text/css
+ ctid 5 uncompressed-len 0 net-response-time-onstart 225 net-response-time-onstop 228   _¶

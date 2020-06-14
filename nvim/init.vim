@@ -1,3 +1,6 @@
+" set python dir
+let g:python3_host_prog = '/usr/bin/python3.8'
+
 call plug#begin(stdpath('data').'/plugged')
 " color
 Plug 'arcticicestudio/nord-vim'
@@ -28,22 +31,25 @@ let g:tex_conceal = ''
 let g:vimtex_latexmk_continuous = 1
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_syntax_enabled = 1
+Plug 'vim-latex/vim-latex'
 
-"python
-Lug 'davidhalter/jedi-vim'
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+" YAML / Formating 
+Plug 'tarekbecker/vim-yaml-formatter'
+let g:yaml_formatter_indent_collection=1
 
 Plug 'neomake/neomake'
 
 " airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 
 
 " airline theme
-let g:airline_theme='nord'
 let g:airline_extensions_branch_enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extentions_tabline_left_sep = ' '
@@ -64,10 +70,10 @@ call neomake#configure#automake('w')
 "---------------------------------------------------------------------------------------------------
 "   " color scheme
 "---------------------------------------------------------------------------------------------------
-set termguicolors 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"set termguicolors 
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme nord
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 
 
 "---------------------------------------------------------------------------------------------------
@@ -169,10 +175,10 @@ inoremap jk <esc>
 
 
 " split navigation
-nnoremap <c-j> <c-w><c-j>
-nnoremap <c-k> <c-w><c-k>
-nnoremap <c-l> <c-w><c-l>
-nnoremap <c-h> <c-w><c-h>
+nnoremap <leader>j <c-w><c-j>
+nnoremap <leader>k <c-w><c-k>
+nnoremap <leader>l <c-w><c-l>
+nnoremap <leader>h <c-w><c-h>
 
 " tab navigation
 nnoremap <c-Left> :tabprevious<CR>
@@ -197,3 +203,6 @@ noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
+
+:autocmd FileType python set colorcolumn=80
+

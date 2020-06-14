@@ -1,0 +1,546 @@
+/* copy to clipboard
+   ========================================================================== */
+
+.clipboard-input,
+.clipboard-output {
+    font-size: 0;
+}
+
+.clipboard-container {
+    display: inline-block;
+    position: relative;
+}
+
+.clipboard-table {
+    display: table;
+    min-height: 32px;
+}
+
+.clipboard-table>div {
+    display: table-row;
+}
+
+.clipboard-cell,
+.clipboard-img {
+    color: #999;
+    display: table-cell;
+    font-family: Arial;
+    font-size: .7rem;
+    line-height: 0;
+    padding: .5rem;
+    position: relative;
+    vertical-align: top;
+}
+
+.clipboard-cell {
+    min-width: 3rem;
+    padding-right: 0;
+    padding-top: 1rem;
+    text-align: right;
+}
+
+.clipboard-img a:hover {
+    background: #e8f3ff;
+    display: inline-block;
+}
+
+.clipboard-table.separate .clipboard-cell,
+.clipboard-table.separate .clipboard-img {
+    display: block;
+}
+
+.clipboard-table.separate .clipboard-cell {
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.clipboard-table.separate .clipboard-img {
+    padding-left: 4rem;
+}
+
+.clipboard-table .chevron-after,
+.clipboard-table .arrow-after {
+    display: none;
+}
+
+.clipboard-hover,
+.clipboard-hover-normal {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.clipboard-inline.clipboard-hover,
+.clipboard-block.clipboard-hover {
+    position: static !important;
+}
+
+.clipboard-hover-normal {
+    cursor: auto;
+}
+
+.clipboard-hover:not(.clipboard-link),
+.clipboard-container:hover .clipboard-hover .link-button
+ {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: relative;
+}
+
+.clipboard-hover.with-link {
+    display: table-cell;
+}
+
+.clipboard-container:hover .clipboard-hover:not(.clipboard-link),
+.clipboard-container:hover .clipboard-hover .link-button {
+    background-color: #fafafa;
+    border: 1px solid #ececec;
+}
+
+.clipboard-link {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.clipboard-link.hide {
+    display: none;
+}
+.clipboard-link .link-button {
+    display: none;
+    margin: 0 .5rem;
+    padding: .5rem;
+}
+.clipboard-link code {
+    left: -999999px;
+    position: absolute;
+    top: 0;
+}
+.clipboard-container:hover .link-button {
+    display: inline-block;
+}
+.clipboard-link .link-button:before {
+    background: url('img/direct-link.png');
+    background-size: 13px auto;
+    content: '';
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.clipboard-link:hover .link-button:before {
+    background: url('img/direct-link.png') 0 -13px;
+    background-size: 13px auto;
+}
+
+.clipboard-container:hover .clipboard-hover:not(.clipboard-link):focus,
+.clipboard-container:hover .clipboard-hover:not(.clipboard-link):hover,
+.clipboard-container:hover .clipboard-link:focus .link-button,
+.clipboard-container:hover .clipboard-link:hover .link-button,
+.clipboard-inline:hover,
+.clipboard-block:hover {
+    background: #e8f3ff;
+    border: 1px solid #e8f3ff;
+}
+
+.clipboard-container:hover .clipboard-hover:not(.clipboard-link):active,
+.clipboard-container:hover .clipboard-hover:active .link-button {
+    background: #c3e1fa;
+    border: 1px solid #9bc8ee;
+}
+
+.code.clipboard-hover {
+    margin: 0;
+}
+
+.clipboard-hover:focus img,
+.clipboard-hover:hover img {
+    mix-blend-mode: multiply;
+}
+
+/* code
+   ================================== */
+
+.clipboard-copy {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    color: #494949;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 13px;
+    height: 50px;
+    left: -999999px;
+    line-height: 1.3;
+    overflow: auto;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-all;
+    z-index: 999999;
+}
+
+.clipboard-copy.show-code {
+    height: 50px;
+    left: 0;
+    overflow: auto;
+    top: 0;
+}
+
+.clipboard-copy.clipboard-hover:active,
+.clipboard-copy.clipboard-hover:not(.clipboard-link):active .link-button {
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+}
+
+/* icons
+   ================================== */
+
+.clipboard-close {
+    cursor: pointer;
+    display: none;
+    height: 30px;
+    margin-top: 5px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 2px;
+    width: 30px;
+    z-index: 999998;
+}
+
+.clipboard-close.visible {
+    display: block;
+}
+
+/* tooltips
+   ================================== */
+
+.clipboard-tooltip-wrapper {
+    display: inline;
+    float: left;
+    height: 0;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 0;
+}
+
+.clipboard-tooltip {
+    background: #f5f5f5;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    bottom: auto;
+    color: #898989;
+    visibility: hidden;
+    font-size: 0px;
+    font-style: normal;
+    font-weight: 400;
+    top: -20px;
+    left: 0;
+    line-height: 1.3;
+    margin: auto;
+    opacity: 0;
+    padding: 7.5px 8px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    white-space: nowrap;
+    width: 0;
+    z-index: 999999;
+    transition: all .7s ease;
+}
+
+.clipboard-hover:hover .clipboard-tooltip.show {
+    top: -53px;
+    opacity: 1;
+    visibility: visible;
+    width: 165px;
+    font-size: 12px;
+    transition: all .2s ease;
+}
+.clipboard-link:hover .clipboard-tooltip {
+    left: -60px;
+}
+
+.clipboard-inline .clipboard-tooltip,
+.clipboard-inline:hover .clipboard-tooltip,
+.clipboard-block .clipboard-tooltip,
+.clipboard-block:hover .clipboard-tooltip {
+    bottom: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+}
+
+.clipboard-inline.image,
+.clipboard-block.image {
+    font-size: 0;
+}
+
+[class^="clipboard-"]:hover .clipboard-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.clipboard-tooltip:before {
+    border-bottom: 2px solid transparent;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 2px solid #f5f5f5;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    transition: all .5s ease;
+    width: 0;
+    z-index: 999999;
+}
+
+.clipboard-tooltip:after {
+    border-bottom: 3px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 3px solid #e5e5e5;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    transition: all .5s ease;
+    width: 0;
+    z-index: 999998;
+}
+
+.clipboard-tooltip.bottom:before {
+    border-bottom: 2px solid #f5f5f5;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 2px solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transition: all .5s ease;
+    width: 0;
+    z-index: 999999;
+}
+
+.clipboard-tooltip.bottom:after {
+    border-bottom: 3px solid #e5e5e5;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 3px solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transition: all .5s ease;
+    width: 0;
+    z-index: 999998;
+}
+
+.clipboard-hover:hover .clipboard-tooltip:before {
+    border-bottom: 9px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 9px solid #f5f5f5;
+    opacity: 1;
+    top: 31px;
+    transition: all .2s ease;
+}
+
+.clipboard-hover:hover .clipboard-tooltip:after {
+    border-bottom: 10px solid transparent;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 10px solid #e5e5e5;
+    opacity: 1;
+    top: 31px;
+    transition: all .2s ease;
+}
+
+.clipboard-tooltip.bottom {
+    bottom: -53px;
+    bottom: 0;
+    opacity: 1;
+    top: auto;
+}
+
+.clipboard-hover:hover .clipboard-tooltip.bottom:before {
+    border-bottom: 9px solid #f5f5f5;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 9px solid transparent;
+    opacity: 1;
+    top: -17px;
+    transition: all .2s ease;
+}
+
+.clipboard-hover:hover .clipboard-tooltip.bottom:after {
+    border-bottom: 10px solid #e5e5e5;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 10px solid transparent;
+    opacity: 1;
+    top: -19px;
+    transition: all .2s ease;
+}
+
+.clipboard-tooltip i {
+    background: url('img/icon-clipboard.png') no-repeat center left;
+    background-size: contain;
+    display: inline-block;
+    height: 0;
+    margin: -3px .25rem 0 0;
+    transition: all .5s ease;
+    vertical-align: middle;
+    width: 0;
+}
+
+.clipboard-tooltip.copied i {
+    background: url('img/icon-checkmark.png') no-repeat center left;
+    background-size: contain;
+    display: inline-block;
+    height: 0;
+    margin: -3px .25rem 0 0;
+    transition: all .5s ease;
+    vertical-align: middle;
+    width: 0;
+}
+
+.clipboard-hover:hover .clipboard-tooltip i {
+    height: 18px;
+    width: 14px;
+    transition: all .1s ease;
+}
+
+/* visible code examples
+   ================================== */
+
+.clipboard .code-plain {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    color: #494949;
+    display: block;
+    font-family: monospace, monospace;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-top: 5px;
+    padding: 20px;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-all;
+}
+
+/* with media
+   ================================== */
+
+.clipboard-img video,
+.clipboard-img img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.clipboard-img img:not([src^="data"]),
+.clipboard-img video {
+    height: auto;
+}
+
+.clipboard-output .media:hover i {
+    background: url('img/animation2x.png') 0 -50px;
+    background-size: 100px;
+    bottom: 0;
+    display: inline-block;
+    height: 50px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
+
+.clipboard-output .media.pause:hover i {
+    background-position: 0 0;
+}
+
+.clipboard-output .media.pause:active i {
+    background-position: -50px 0;
+}
+
+.clipboard-output .media:active i {
+    background-position: -50px -50px;
+}
+
+.clipboard-output .media .hide,
+.clipboard-output .media audio {
+    display: block !important;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+@media all and (max-width: 600px) {
+    .clipboard-cell {
+        min-width: 1rem;
+        width: auto;
+    }
+
+    .clipboard-table.separate .clipboard-cell,
+    .clipboard-table.separate .clipboard-img {
+        display: table-cell;
+        padding-left: .5rem;
+    }
+
+    .clipboard-num {
+        display: none;
+    }
+
+    .clipboard-table .chevron-after,
+    .clipboard-table .arrow-after {
+        display: inline;
+    }
+}íÊ%t¦u      ^º ø^º øA«^º®ò   D    :https://reference.wolfram.com/common/js/clipboard/2.0/clipboard.css necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Tue, 24 Mar 2020 16:46:31 GMT
+ETag: "2a99-5a19c7e63e7c0"
+Accept-Ranges: bytes
+Content-Length: 10905
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=3600, public
+Content-Type: text/css; charset=utf-8
+ original-response-headers Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Tue, 24 Mar 2020 16:46:31 GMT
+ETag: "2a99-5a19c7e63e7c0"
+Accept-Ranges: bytes
+Content-Length: 10905
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=3600, public
+Keep-Alive: timeout=2, max=96
+Connection: Keep-Alive
+Content-Type: text/css; charset=utf-8
+ ctid 5 uncompressed-len 0 net-response-time-onstart 374 net-response-time-onstop 374   *™

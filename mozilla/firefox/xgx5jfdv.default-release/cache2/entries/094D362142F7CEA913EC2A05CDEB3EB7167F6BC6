@@ -1,0 +1,408 @@
+/*! ResponsiveSlides.js v1.54
+ * http://responsiveslides.com
+ * http://viljamis.com
+ *
+ * Copyright (c) 2011-2012 @viljamis
+ * Available under the MIT license
+ */
+
+/*jslint browser: true, sloppy: true, vars: true, plusplus: true, indent: 2 */
+
+(function ($, window, i) {
+  $.fn.responsiveSlides = function (options) {
+
+    // Default settings
+    var settings = $.extend({
+      "auto": true,             // Boolean: Animate automatically, true or false
+      "speed": 500,             // Integer: Speed of the transition, in milliseconds
+      "timeout": 4000,          // Integer: Time between slide transitions, in milliseconds
+      "pager": false,           // Boolean: Show pager, true or false
+      "nav": false,             // Boolean: Show navigation, true or false
+      "random": false,          // Boolean: Randomize the order of the slides, true or false
+      "pause": false,           // Boolean: Pause on hover, true or false
+      "pauseControls": true,    // Boolean: Pause when hovering controls, true or false
+      "prevText": "Previous",   // String: Text for the "previous" button
+      "nextText": "Next",       // String: Text for the "next" button
+      "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
+      "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+      "manualControls": "",     // Selector: Declare custom pager navigation
+      "namespace": "rslides",   // String: change the default namespace used
+      "before": $.noop,         // Function: Before callback
+      "after": $.noop           // Function: After callback
+    }, options);
+
+    return this.each(function () {
+
+      // Index for namespacing
+      i++;
+
+      var $this = $(this),
+
+        // Local variables
+        vendor,
+        selectTab,
+        startCycle,
+        restartCycle,
+        rotate,
+        $tabs,
+
+        // Helpers
+        index = 0,
+        $slide = $this.children(),
+        length = $slide.size(),
+        fadeTime = parseFloat(settings.speed),
+        waitTime = parseFloat(settings.timeout),
+        maxw = parseFloat(settings.maxwidth),
+
+        // Namespacing
+        namespace = settings.namespace,
+        namespaceIdx = namespace + i,
+
+        // Classes
+        navClass = namespace + "_nav " + namespaceIdx + "_nav",
+        activeClass = namespace + "_here",
+        visibleClass = namespaceIdx + "_on",
+        slideClassPrefix = namespaceIdx + "_s",
+
+        // Pager
+        $pager = $("<ul class='" + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
+
+        // Styles for visible and hidden slides
+        visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
+        hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
+
+        // Detect transition support
+        supportsTransitions = (function () {
+          var docBody = document.body || document.documentElement;
+          var styles = docBody.style;
+          var prop = "transition";
+          if (typeof styles[prop] === "string") {
+            return true;
+          }
+          // Tests for vendor specific prop
+          vendor = ["Moz", "Webkit", "Khtml", "O", "ms"];
+          prop = prop.charAt(0).toUpperCase() + prop.substr(1);
+          var i;
+          for (i = 0; i < vendor.length; i++) {
+            if (typeof styles[vendor[i] + prop] === "string") {
+              return true;
+            }
+          }
+          return false;
+        })(),
+
+        // Fading animation
+        slideTo = function (idx) {
+          settings.before(idx);
+          // If CSS3 transitions are supported
+          if (supportsTransitions) {
+            $slide
+              .removeClass(visibleClass)
+              .css(hidden)
+              .eq(idx)
+              .addClass(visibleClass)
+              .css(visible);
+            index = idx;
+            setTimeout(function () {
+              settings.after(idx);
+            }, fadeTime);
+          // If not, use jQuery fallback
+          } else {
+            $slide
+              .stop()
+              .fadeOut(fadeTime, function () {
+                $(this)
+                  .removeClass(visibleClass)
+                  .css(hidden)
+                  .css("opacity", 1);
+              })
+              .eq(idx)
+              .fadeIn(fadeTime, function () {
+                $(this)
+                  .addClass(visibleClass)
+                  .css(visible);
+                settings.after(idx);
+                index = idx;
+              });
+          }
+        };
+
+      // Random order
+      if (settings.random) {
+        $slide.sort(function () {
+          return (Math.round(Math.random()) - 0.5);
+        });
+        $this
+          .empty()
+          .append($slide);
+      }
+
+      // Add ID's to each slide
+      $slide.each(function (i) {
+        this.id = slideClassPrefix + i;
+      });
+
+      // Add max-width and classes
+      $this.addClass(namespace + " " + namespaceIdx);
+      if (options && options.maxwidth) {
+        $this.css("max-width", maxw);
+      }
+
+      // Hide all slides, then show first one
+      $slide
+        .hide()
+        .css(hidden)
+        .eq(0)
+        .addClass(visibleClass)
+        .css(visible)
+        .show();
+
+      // CSS transitions
+      if (supportsTransitions) {
+        $slide
+          .show()
+          .css({
+            // -ms prefix isn't needed as IE10 uses prefix free version
+            "-webkit-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-moz-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-o-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "transition": "opacity " + fadeTime + "ms ease-in-out"
+          });
+      }
+
+      // Only run if there's more than one slide
+      if ($slide.size() > 1) {
+
+        // Make sure the timeout is at least 100ms longer than the fade
+        if (waitTime < fadeTime + 100) {
+          return;
+        }
+
+        // Pager
+        if (settings.pager && !settings.manualControls) {
+          var tabMarkup = [];
+          $slide.each(function (i) {
+            var n = i + 1;
+            tabMarkup +=
+              "<li>" +
+              "<a href='#' class='" + slideClassPrefix + n + "'>" + n + "</a>" +
+              "</li>";
+          });
+          $pager.append(tabMarkup);
+
+          // Inject pager
+          if (options.navContainer) {
+            $(settings.navContainer).append($pager);
+          } else {
+            $this.after($pager);
+          }
+        }
+
+        // Manual pager controls
+        if (settings.manualControls) {
+          $pager = $(settings.manualControls);
+          $pager.addClass(namespace + "_tabs " + namespaceIdx + "_tabs");
+        }
+
+        // Add pager slide class prefixes
+        if (settings.pager || settings.manualControls) {
+          $pager.find('li').each(function (i) {
+            $(this).addClass(slideClassPrefix + (i + 1));
+          });
+        }
+
+        // If we have a pager, we need to set up the selectTab function
+        if (settings.pager || settings.manualControls) {
+          $tabs = $pager.find('a');
+
+          // Select pager item
+          selectTab = function (idx) {
+            $tabs
+              .closest("li")
+              .removeClass(activeClass)
+              .eq(idx)
+              .addClass(activeClass);
+          };
+        }
+
+        // Auto cycle
+        if (settings.auto) {
+
+          startCycle = function () {
+            rotate = setInterval(function () {
+
+              // Clear the event queue
+              $slide.stop(true, true);
+
+              var idx = index + 1 < length ? index + 1 : 0;
+
+              // Remove active state and set new if pager is set
+              if (settings.pager || settings.manualControls) {
+                selectTab(idx);
+              }
+
+              slideTo(idx);
+            }, waitTime);
+          };
+
+          // Init cycle
+          startCycle();
+        }
+
+        // Restarting cycle
+        restartCycle = function () {
+          if (settings.auto) {
+            // Stop
+            clearInterval(rotate);
+            // Restart
+            startCycle();
+          }
+        };
+
+        // Pause on hover
+        if (settings.pause) {
+          $this.hover(function () {
+            clearInterval(rotate);
+          }, function () {
+            restartCycle();
+          });
+        }
+
+        // Pager click event handler
+        if (settings.pager || settings.manualControls) {
+          $tabs.bind("click", function (e) {
+            e.preventDefault();
+
+            if (!settings.pauseControls) {
+              restartCycle();
+            }
+
+            // Get index of clicked tab
+            var idx = $tabs.index(this);
+
+            // Break if element is already active or currently animated
+            if (index === idx || $("." + visibleClass).queue('fx').length) {
+              return;
+            }
+
+            // Remove active state from old tab and set new one
+            selectTab(idx);
+
+            // Do the animation
+            slideTo(idx);
+          })
+            .eq(0)
+            .closest("li")
+            .addClass(activeClass);
+
+          // Pause when hovering pager
+          if (settings.pauseControls) {
+            $tabs.hover(function () {
+              clearInterval(rotate);
+            }, function () {
+              restartCycle();
+            });
+          }
+        }
+
+        // Navigation
+        if (settings.nav) {
+          var navMarkup =
+            "<a href='#' class='" + navClass + " prev'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
+
+          // Inject navigation
+          if (options.navContainer) {
+            $(settings.navContainer).append(navMarkup);
+          } else {
+            $this.after(navMarkup);
+          }
+
+          var $trigger = $("." + namespaceIdx + "_nav"),
+            $prev = $trigger.filter(".prev");
+
+          // Click event handler
+          $trigger.bind("click", function (e) {
+            e.preventDefault();
+
+            var $visibleClass = $("." + visibleClass);
+
+            // Prevent clicking if currently animated
+            if ($visibleClass.queue('fx').length) {
+              return;
+            }
+
+            //  Adds active class during slide animation
+            //  $(this)
+            //    .addClass(namespace + "_active")
+            //    .delay(fadeTime)
+            //    .queue(function (next) {
+            //      $(this).removeClass(namespace + "_active");
+            //      next();
+            //  });
+
+            // Determine where to slide
+            var idx = $slide.index($visibleClass),
+              prevIdx = idx - 1,
+              nextIdx = idx + 1 < length ? index + 1 : 0;
+
+            // Go to slide
+            slideTo($(this)[0] === $prev[0] ? prevIdx : nextIdx);
+            if (settings.pager || settings.manualControls) {
+              selectTab($(this)[0] === $prev[0] ? prevIdx : nextIdx);
+            }
+
+            if (!settings.pauseControls) {
+              restartCycle();
+            }
+          });
+
+          // Pause when hovering navigation
+          if (settings.pauseControls) {
+            $trigger.hover(function () {
+              clearInterval(rotate);
+            }, function () {
+              restartCycle();
+            });
+          }
+        }
+
+      }
+
+      // Max-width fallback
+      if (typeof document.body.style.maxWidth === "undefined" && options.maxwidth) {
+        var widthSupport = function () {
+          $this.css("width", "100%");
+          if ($this.width() > maxw) {
+            $this.css("width", maxw);
+          }
+        };
+
+        // Init fallback
+        widthSupport();
+        $(window).bind("resize", function () {
+          widthSupport();
+        });
+      }
+
+    });
+
+  };
+})(jQuery, this, 0);ã^Ô<ª      ^âÚs^âÚsAÅ"ñ^ìò   <    :https://www.alerusrb.com/Client/Scripts/ResponsiveSlides.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Last-Modified: Thu, 18 Dec 2014 21:19:55 GMT
+Accept-Ranges: bytes
+ETag: "e2ba645e81bd01:0"
+Server: Microsoft-IIS/7.5
+X-Powered-By: ASP.NET
+Date: Fri, 12 Jun 2020 01:29:22 GMT
+Content-Length: 11869
+ original-response-headers Content-Type: application/x-javascript
+Last-Modified: Thu, 18 Dec 2014 21:19:55 GMT
+Accept-Ranges: bytes
+ETag: "e2ba645e81bd01:0"
+Server: Microsoft-IIS/7.5
+X-Powered-By: ASP.NET
+Date: Fri, 12 Jun 2020 01:29:22 GMT
+Content-Length: 11869
+ ctid 2 uncompressed-len 0 net-response-time-onstart 518 net-response-time-onstop 518   .]

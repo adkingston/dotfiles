@@ -1,0 +1,185 @@
+/* ==========================================================================
+   TECH NOTES, TUTORIALS, MONOGRAPHS
+   ========================================================================== */
+/*  Tutorials 
+    ---------------------------- */
+#tutorialOverview .toggle { color: #0549a6; }
+#tutorialOverview h2, #tutorialOverview h2.toggle { color: #6276b3; padding: .6rem .2rem .2rem; }
+#tutorialOverview h2:before { content: ''; width: 6px; height: 6px; display: inline-block; }
+#tutorialOverview h2 a { color: #6276b3; font-size: 1.08rem; }
+#tutorialOverview h2 a:hover { color: #f77700; }
+#tutorialOverview section:last-of-type h2.toggle { margin: 0 0 .4rem; }
+#tutorialOverview h3 { padding: .18rem 0 .18rem; font-size: 1rem; letter-spacing: .043rem; margin: 0 .5rem; }
+#tutorialOverview h4 { margin: .3rem .5rem; font-size: .9rem; }
+#tutorialOverview .overviews { margin: 1rem 0 1rem 1.33rem; font-size: 1.1rem; }
+#tutorialOverview h5 { margin: .3rem .5rem; font-size: .8rem; padding: 0; }
+#tutorialOverview h6 { margin: .2rem .5rem; font-size: .7rem; padding: 0; }
+#tutorialOverview .toggle { margin: 0; }
+#tutorialOverview .hideable .hideable { margin: .5rem .5rem; }
+
+#tutorial .main-title, #tutorialOverview .main-title { font-family: 'Linux Libertine', Georgia, Times, serif; font-weight: 400; }
+
+/*  Technotes 
+    ---------------------------- */
+#techNote .bullet-list li, #tutorial .bullet-list li { font-size: .93rem; line-height: 1.5; }
+#techNote h2.Section, .TechNoteSection { color: #6276b3; font-size: 1.8rem; font-weight: 400; border-top: 1px solid #d6d6d6; margin: 2.5rem 0 0; }
+#tutorial h2.Section { font-size: 1.5rem; font-weight: 400; }
+#techNote h3, #tutorial h3 { color: #b46625; font-size: 1.3rem; }
+#techNote h1, #tutorial h1 { line-height: 1.2; }
+
+#tutorial .TechNoteCaption { margin: 0 0 1rem; }
+#tutorial h3, #monograph h3 { color: #b46625; font-size: 1.3rem; }
+
+#techNote .TechNoteText, #techNote .Text { margin: 1rem 0 1.2rem; }
+#techNote .FilledSmallSquare { color: #adadad; margin: 0 2px 0 0; }
+#techNote .TechNoteMathCaption { margin: 1.2rem 0 .3rem; }
+#techNote .TechNoteCaption { font-style: italic; margin: 2px 0 1.5rem; font-size: .9rem; color: #777; }
+#techNote .Print { padding: 0 0 0 3.5rem; }
+
+.MCap { margin: 1.07rem 0 0; line-height: 1.6; font-size: .93rem; color: #222; }
+p.Text, ul.Text, .TechNoteText { margin: .3rem 0 1.07rem; line-height: 1.5; font-size: 1.07rem; color: #222; }
+p.Caption { font-size: .84rem; margin: 0 0 1.6rem; font-weight: 300; }
+#techNote ul.Text { margin: 0 0 0 .8rem; max-width: 80%; }
+ul.Text li { position: relative; line-height: 1.3; margin: 0 0 .6rem; }
+ul.Text li:before { top: .55rem; }
+ul li > ul.Text li.Subitem { margin: 0 0 .6rem 1rem;  }
+ul.Text li.Subitem { margin: 0 0 0 2rem; font-size: .93rem; }
+
+/*  Jumpboxes 
+    ---------------------------- */
+.TutorialJumpBox, .TechNoteJumpBox { margin: 0 0 2rem; }
+#tutorial .TutorialJumpBox { margin: 1rem 0 2rem; }
+.TutorialJumpBox a:before, .TechNoteJumpBox a:before { content: '‚à®'; transform: scaleX(2); position: absolute; left: .2rem; display: inline-block; color: #6276b3; font-family: monospace; font-size: .6rem; top: .3rem; }
+.TutorialJumpBox .nogridboxdividers { margin: 0; }
+.TutorialJumpBox a, .TechNoteJumpBox a { color: #222; font-size: .9rem; line-height: 1.5; display: block; padding: 0 0 0 1.5rem; text-indent: 0; position: relative; }
+#monograph .TutorialJumpBox a:before, #monograph .TechNoteJumpBox a:before, #tutorial .TutorialJumpBox a:before, #tutorial .TechNoteJumpBox a:before { color: #b46625; }
+#techNote .TechNoteJumpBox { background: #f5f5f5; padding: 1rem 1.5rem .5rem; margin: 1.5rem 0 2.8rem; border-top: 2px solid #6276b3; }
+#techNote .TechNoteJumpBox table { width: auto; }
+#techNote .TechNoteJumpBox td { min-width: 200px; padding: 0 2rem 0 0; }
+
+/*  Monographs 
+    ---------------------------- */
+#monograph h2.Section { font-weight: 400; }
+#monographOverview .main-heading-wrapper:not(.sticky) { background: #be5324; color: #fff; border-top: 1.75rem solid #be5324; border-bottom: 1.75rem solid #be5324; margin: 0 0 3rem; }
+#monograph .main-title, #monographOverview .main-title { font-family: 'Georgia', serif; font-weight: 400; }
+#monograph section .inner, #monograph .TutorialAbstract .inner, #monograph .breadcrumb, #monograph .overview-menu-items { background-color: #fff !important; font-family: Georgia, serif; }
+#monographOverview .main { counter-reset: h2counter; }
+#monographOverview section h2:not(.toggle) { padding: 0 0 0 1.5rem; margin: 0 auto; position: relative; line-height: 1.3; }
+#monographOverview section h2 a { font-size: 1.275rem; }
+#monographOverview section h2 a:not(:hover) { color: #535353; }
+#monographOverview section h2:not(.toggle):before { counter-increment: h2counter; content: counter(h2counter); position: absolute; left: 0; top: .15rem; font-size: 1.375rem; border-right: 1px solid #969696; color: #be5324; display: inline-block; width: 1.1rem; height: 1.5rem; line-height: .9; }
+#monographOverview section a { font-family: Georgia, serif; }
+#monographOverview .main section > .inner > section { padding: .4rem 0; }
+#monographOverview .main section > .inner > h2 { margin: .4rem 0 !important; border-top: .8rem solid transparent; }
+
+#monograph .TutorialAbstract { margin: 0; }
+#monograph .TutorialAbstract .inner { padding: 0 12px 1rem 12px; }
+.MonographTOCSection { margin: 0 0 4px 1.5rem; }
+#monograph .download-pdf { margin: .5rem auto 0; padding: 1.5rem 0 3.75rem 2rem; border-top: 1px solid #cacaca; position: relative; }
+#monograph .download-pdf:before { content: ''; display: inline-block; width: 16px; height: 20px; background: url('../img/tutorial-download.png'); background-size: cover; position: absolute; left: .3rem; top: 1.3rem; }
+#monograph .download-pdf a { font-size: 1rem; font-family: Georgia, serif; color: #535353; }
+#monograph .feedback-wrapper .feedback-content { border-top: 1px solid #cacaca; margin: -1px auto 0; }
+#monograph .footer-links { position: relative; z-index: 0; }
+#monograph .footer-links .inner { background: #fff; border: 0; }
+#monograph .footer-links .box {  }
+#monograph section, #monograph section:last-of-type { margin: 1.5rem 0 .5rem; padding: 0; }
+/* temporary until build no longer has nested sections */
+#monograph section .inner section { padding: 0; }
+#monographOverview .feedback-wrapper { margin: 3rem 0 1.5rem; }
+
+#monograph .main-heading { text-align: left; max-width: 100%; padding: 4.5rem 0 0; }
+#monograph .main-title { font-size: 2.4rem; }
+#monograph .MathTable a { font-family: Source Sans Pro, sans-serif; }
+#monograph .related-links .inner, #monograph .feedback-wrapper .inner { font-family: Source Sans Pro; }
+#monograph .breadcrumb { margin: 2.5rem 0 0 0; position: relative; border-bottom: 1px solid #c7c7c7; padding: 0 4rem .2rem 0; }
+#monograph .breadcrumb .current { border-top: 1px solid #c7c7c7; font-size: .85rem; padding: .2rem 0 0 0; margin: .3rem 0; color: #535353; display: none; }
+#monograph .main-heading-wrapper:not(.open) .breadcrumb { z-index: 10; }
+#monograph .breadcrumb a.overview { color: #be5324; font-size: .975rem; overflow: hidden; white-space: nowrap; display: block; text-overflow: ellipsis; }
+#monograph .sticky .topContentWrap { z-index: 1; }
+#monograph .sticky .breadcrumb { display: none; }
+#monograph .sticky { background: #be5324; }
+#monograph .sticky .dropdown a.menu, #monograph .sticky .main-title { color: #fff; }
+#monograph .sticky .dropdown a.menu::after { filter: brightness(0) invert(1); }
+#monograph .sticky .overview-menu { max-width: 1175px; top: 43px; z-index: 10000; }
+#monograph .sticky .overview-nav-buttons * { color: #fff; }
+#monograph .sticky .overview-nav-buttons { left: 12px; }
+#monograph .sticky .main-heading { padding: 0 0 0 2rem; }
+#monograph .sticky .main-title { font-size: 16px; z-index: 10; position: relative; }
+#monograph .overview-menu { position: absolute; right: 0; top: 4.3rem; font-size: 0; font-weight: 300; }
+#monograph .main-heading-wrapper:not(.open) .overview-menu { z-index: 10; }
+#monograph .overview-menu .overview-nav-buttons a { font-size: 40px; }
+#monograph .hamburger { border: 0; background: transparent; font-family: Courier; top: -5px; margin: 0 3px; position: relative; font-size: 25px; height: 20px; line-height: 0; }
+#monograph .overview-nav-buttons { right: 0; position: absolute; width: 58px; text-align: right; line-height: .3; }
+#monograph .sticky .overview-nav-buttons { text-align: left; }
+#monograph .overview-nav-buttons * { color: #be5324; }
+#monograph .overview-nav-buttons .first, #monograph .overview-nav-buttons .inactive { color: #c7c7c7; }
+#monograph .overview-nav-buttons *:hover { color: #f77700; }
+#monograph .overview-menu-items { font-size: .81rem; background: #fff; padding: 1rem .6rem; border: 1px solid #bfbfbf; box-shadow: 0 0 10px #d9d9d9; border-radius: 5px; top: 1.5rem; right: 0; position: relative; width: 250px; padding: 1rem; }
+#monograph .overview-menu-items a { padding: .3rem 0 .3rem 0; display: inline-block; font-size: .98rem; font-weight: 400; }
+#monograph .overview-menu-items a:hover { color: #f77700; }
+#monograph .overview-menu-items .download-pdf { padding: 0; margin: .7rem 0 0 0; font-style: italic; }
+#monograph .overview-menu-items .download-pdf:before { display: none; }
+#monograph .overview-menu-items .download-pdf a { font-family: Source Sans Pro, sans-serif; }
+
+#monograph .sticky .overview-menu { right: 0; left: 0; margin: auto; position: fixed; }
+#monograph .sticky .overview-nav-buttons { right: auto; position: absolute; }
+#monograph .sticky .overview-nav-buttons a { display: none; }
+#monograph .sticky .overview-menu-items { right: auto; left: 0; top: 30px; }
+#monograph .sticky .collapsed-dropdown .square { background: #fff; }
+#monograph .sticky.collapsed.open a.menu { color: #535353; filter: none; }
+#monograph .sticky.collapsed.open a.menu:after { filter: none; }
+#monograph .sticky.collapsed.open a.menu:hover:after, #monograph .sticky.collapsed.open .hover a.menu:after { filter: brightness(0) invert(1); }
+#monograph .sticky .overview-menu { font-size: 2rem; }
+#monograph .sticky .hamburger { top: 6px; }
+#monograph #_footer-offset { margin: 0 auto; background: #fff; }
+#monograph .DisplayFormula { margin: 1.07rem 0; }
+#monograph .MonographReference { font-size: .9rem; }
+#monograph .TutorialJumpBox { margin: -.5rem 0 2rem; }
+
+@media all and (max-width: 1200px) {
+    .main > .AwaitingReviewNote, .main > .ObsolescenceNote { margin-left: 3% !important; margin-right: 3% !important; }
+}
+@media all and (max-width: 600px) {
+    #techNote h2.Section, .TechNoteSection { font-size: 1.7rem; }
+    #monograph section:not(.related-links) .inner { padding: 1rem 0; }
+    .MonographTOCSection { margin: 0 0 .5rem 1.5rem; }
+    #monograph .related-links .inner { background-position: 0 1.2rem; padding: 1rem 0 2rem; }
+    #monograph .breadcrumb { margin: 2.5rem 1rem 0; position: relative; }
+    #monograph .main-heading-wrapper:not(.sticky) .main-heading { padding: 4.5rem 0 1rem; }
+    #monograph .main-heading-wrapper:not(.sticky) .overview-nav-buttons { right: 1rem; top: -2px; }
+    #monograph .TutorialJumpBox { margin: -2rem 0 0; }
+    .TutorialJumpBox a, .TechNoteJumpBox a { font-size: 1rem; padding: 0 0 .5rem 1rem; }
+    .TutorialJumpBox td, .TechNoteJumpBox td { display: block; }
+    #techNote .Print { padding: 0 0 0 2rem; }
+    #techNote ul.Text { max-width: 100%; }
+    #techNote .special-character.FilledSmallSquare { font-size: 5px; }
+}
+@media all and (max-width: 320px) {
+    #monographOverview .main-heading-wrapper:not(.sticky) { border-top: 1rem solid #be5324; border-bottom: 1rem solid #be5324; margin: 0; }
+    #monographOverview .feedback-wrapper { margin: 1rem 0 1.5rem; }
+    #monographOverview .footer-links { margin: 5.5rem 12px 3.5rem; }
+    #monograph .main-heading-wrapper:not(.sticky) .main-heading { padding: 4rem 0 0; }
+    .footer-links .footer-main-links { padding: .7rem 0; }
+    .footer-links a { margin: .3rem .2rem }
+    .footer-secondary-links a { display: block; }
+    .footer-links .divider { display: none; }
+}èq¬∫#ç      ^∫†¯^∫†¯A´^∫ÆÚ   @    :https://reference.wolfram.com/language-assets/css/technotes.css necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEANAFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAa0MIIGsDCCBZigAwIBAgIJAK00WJiG2YAIMA0GCSqGSIb3DQEBCwUAMIG0MQswCQYDVQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEaMBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xLTArBgNVBAsTJGh0dHA6Ly9jZXJ0cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzEzMDEGA1UEAxMqR28gRGFkZHkgU2VjdXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTIwMDIxODE3MTIzM1oXDTIyMDMzMTE5MTE0MVowOzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRhdGVkMRYwFAYDVQQDDA0qLndvbGZyYW0uY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxx3BN1hiYTpCxIMo8FqpWZrONAfTiR1UkKly8XxH8XbEBnKmQhP8XDrL3nQhM0dhJrPbE42oRa3pHP1iL9Y7YvIV9JVtUiO0Rf9SZS1zcxI7Q/w070WdEANQ6t/V1VSlni6M8JPnmAu5QggomrXeRQ78o1L50stRvO1uTZhenw6odnTqNhvF2Da8X7hoKoDFKkV0TeKRFZDyVPLXn1/Ic0dPkr70wbSVjrrc2BRIZ9Z+NtNZ8JWH4q+DGWgsAowdveG0TqPKQvJeanZ0LaputSPX/NF7yVj0mFzmxQGnQD4iGjALav0e0/OcdNzY86a4rWsHp/suWnDw8T7hgoMAawIDAQABo4IDOzCCAzcwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgWgMDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2RpZzJzMS0xNzMxLmNybDBdBgNVHSAEVjBUMEgGC2CGSAGG/W0BBxcBMDkwNwYIKwYBBQUHAgEWK2h0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS8wCAYGZ4EMAQIBMHYGCCsGAQUFBwEBBGowaDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMEAGCCsGAQUFBzAChjRodHRwOi8vY2VydGlmaWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvZ2RpZzIuY3J0MB8GA1UdIwQYMBaAFEDCvSeOzDSDMKIz1/tss/C0LIDOMCUGA1UdEQQeMByCDSoud29sZnJhbS5jb22CC3dvbGZyYW0uY29tMB0GA1UdDgQWBBQxK8mmwZvQDB3NN+VOuaIxijgi8jCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFwWUmCsgAABAMARzBFAiA3HMyNPX1CVeKFxckh6AaAe6vwY8gp+7Hgxjvp8a9BagIhAOwLtxXWhmdaZoPyAsAOjGdiNvBRxlAcxqQzsS+YrUfgAHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFwWUmGdgAABAMARzBFAiBSy1ej04r6tHGGBFjOWv8dCbaZPw44QNoWdCWJ1j62jQIhAMpZbdqS3wR+QWF2obLhS7EJ7DtgiAVLZguK6iCxOso3AHYAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0AAAFwWUmI8gAABAMARzBFAiArziWZ0wfyEGSQGBYZCk86rJecZ7uDsUOvUxVyaKKK6wIhAJJbE1bxZfmuEhq89BhYkTNJvV+NQmXYGaFsCy390j6cMA0GCSqGSIb3DQEBCwUAA4IBAQCcgVfT22T8BYkRpGl0+k7Yr0hnE5CO1jKhgn9RBL6tJEYlucmryEB9sMPjEvfgBmzNnxxILnOVJEowBV+Wp8kTfz8tG18mpkjX5GjSaYitfECvrPriDex7cxOfgAgq/ntz7ALPGiAV+2qaK7XYOjuT5SUr5lWOV0SYOULTJTUUiG9nDYobzU+YJIxEDFZlKWObB6aPd6+dQIA45Cm0c89okikWlDEc85/JfV/h61vy0/j3z+QjzP2yifJ1MwAADzMSfV/5J9SFRpOgo++PrRy4mb3IefdCFQq0k5Qqiza0221w5ZWgemg+8zyqVVGNxgy3niM6W7WvhGQk/RqJ+BoNwC8AAwAAAAABAQAAAAAAAARQMjU2AAAAEFJTQS1QS0NTMS1TSEEyNTYAA2YKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAABrQwggawMIIFmKADAgECAgkArTRYmIbZgAgwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjAwMjE4MTcxMjMzWhcNMjIwMzMxMTkxMTQxWjA7MSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxFjAUBgNVBAMMDSoud29sZnJhbS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHHcE3WGJhOkLEgyjwWqlZms40B9OJHVSQqXLxfEfxdsQGcqZCE/xcOsvedCEzR2Ems9sTjahFrekc/WIv1jti8hX0lW1SI7RF/1JlLXNzEjtD/DTvRZ0QA1Dq39XVVKWeLozwk+eYC7lCCCiatd5FDvyjUvnSy1G87W5NmF6fDqh2dOo2G8XYNrxfuGgqgMUqRXRN4pEVkPJU8tefX8hzR0+SvvTBtJWOutzYFEhn1n4201nwlYfir4MZaCwCjB294bROo8pC8l5qdnQtqm61I9f80XvJWPSYXObFAadAPiIaMAtq/R7T85x03Njzpritawen+y5acPDxPuGCgwBrAgMBAAGjggM7MIIDNzAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAOBgNVHQ8BAf8EBAMCBaAwOAYDVR0fBDEwLzAtoCugKYYnaHR0cDovL2NybC5nb2RhZGR5LmNvbS9nZGlnMnMxLTE3MzEuY3JsMF0GA1UdIARWMFQwSAYLYIZIAYb9bQEHFwEwOTA3BggrBgEFBQcCARYraHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzAIBgZngQwBAgEwdgYIKwYBBQUHAQEEajBoMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5nb2RhZGR5LmNvbS8wQAYIKwYBBQUHMAKGNGh0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS9nZGlnMi5jcnQwHwYDVR0jBBgwFoAUQMK9J47MNIMwojPX+2yz8LQsgM4wJQYDVR0RBB4wHIINKi53b2xmcmFtLmNvbYILd29sZnJhbS5jb20wHQYDVR0OBBYEFDEryabBm9AMHc035U65ojGKOCLyMIIBfgYKKwYBBAHWeQIEAgSCAW4EggFqAWgAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAXBZSYKyAAAEAwBHMEUCIDcczI09fUJV4oXFySHoBoB7q/BjyCn7seDGO+nxr0FqAiEA7Au3FdaGZ1pmg/ICwA6MZ2I28FHGUBzGpDOxL5itR+AAdgDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAXBZSYZ2AAAEAwBHMEUCIFLLV6PTivq0cYYEWM5a/x0Jtpk/DjhA2hZ0JYnWPraNAiEAyllt2pLfBH5BYXahsuFLsQnsO2CIBUtmC4rqILE6yjcAdgBWFAaaL9fC7NP14b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAXBZSYjyAAAEAwBHMEUCICvOJZnTB/IQZJAYFhkKTzqsl5xnu4OxQ69TFXJooorrAiEAklsTVvFl+a4SGrz0GFiRM0m9X41CZdgZoWwLLf3SPpwwDQYJKoZIhvcNAQELBQADggEBAJyBV9PbZPwFiRGkaXT6TtivSGcTkI7WMqGCf1EEvq0kRiW5yavIQH2ww+MS9+AGbM2fHEguc5UkSjAFX5anyRN/Py0bXyamSNfkaNJpiK18QK+s+uIN7HtzE5+ACCr+e3PsAs8aIBX7aportdg6O5PlJSvmVY5XRJg5QtMlNRSIb2cNihvNT5gkjEQMVmUpY5sHpo93r51AgDjkKbRzz2iSKRaUMRzzn8l9X+HrW/LT+PfP5CPM/bKJ8nUzAAAPMxJ9X/kn1IVGk6Cj74+tHLiZvch590IVCrSTlCqLNrTbbXDllaB6aD7zPKpVUY3GDLeeIzpbta+EZCT9Gon4Gg1mCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAATUMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3MDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzDBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOvK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23ecSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HYpDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMBAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEGCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2RJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawiDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11GIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2xLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDABZgoyJpFcT/u7IImFpjLfBb3Dl5pUIkzVhYlpa26W6oMAAAAAAAADyTCCA8UwggKtoAMCAQICAQAwDQYJKoZIhvcNAQELBQAwgYMxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjExMC8GA1UEAxMoR28gRGFkZHkgUm9vdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkgLSBHMjAeFw0wOTA5MDEwMDAwMDBaFw0zNzEyMzEyMzU5NTlaMIGDMQswCQYDVQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEaMBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xMTAvBgNVBAMTKEdvIERhZGR5IFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/cWII8fpZNPcbyRij94BJWOkigxOmxSBDATuE8eaFSZ8n6vaEG06gtNtwmMcyAbEFPgdO7vT6Ty9ZMCLnqxlWa+KAB/zzFnWAOVF75fk1tnROqY2CE+S2P6kDg/qivooVan/eC8O2GRQFyurDqASUO0Z8Mg3zAGYiyI1pbTaMERi307IcYLQ4+gKMztPdRgfeCj7rXXzIfPuwK1OkkmJpUSUFYRpEgYwsqUOWI9+sOoGaDinFHKnpXR62np4wCjnO8YiA+0tdzDLshWJDJTQCVicBkbQ7cCo/brHonIgBfZ/U+dtTbWCdvyznWKu4X0b8zsQbAzwJ60kxXGlGs+BHAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBQ6moUHEGcotu/2vQVBbiDBlNoP3jANBgkqhkiG9w0BAQsFAAOCAQEAmdtdedX5l1lnA2HxfjsGMXUtoSCOT2WHtPemnLzY6S/Q21ruz3SMc7Q4QtoFe/gCdbj9pbHXrvbX3hPLUxB+ikbRl/q3LisRq5CwJ4D56J9a6Tefq+TfbLOFF5092SRPeZE11l8E64CDq5oCLbUQ9NiQxwRzQO1yJaCpn+yeq2gSmVfGjxI6CaS9RP0GFTfBm+Qyo+046Nhk8yx+FPwC6p/N/wdoF9sikDgteo3RVPFp418zyno9ewrjyn9fOeXidbrFdhgzzizwL0yt97Hnzk+oxJtKVAbFf33VCA/iHP5+F7isXvbUFrJDCQxN9qdrtJmEZcp6iOLiRL5c9+oc9QAAAAEAAAAAAA== request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2020 19:42:47 GMT
+ETag: "2f27-5a0ad8eac5bc0"
+Accept-Ranges: bytes
+Content-Length: 12071
+Cache-Control: max-age=3600, public
+Content-Type: text/css
+ original-response-headers Date: Tue, 12 May 2020 13:13:06 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2020 19:42:47 GMT
+ETag: "2f27-5a0ad8eac5bc0"
+Accept-Ranges: bytes
+Content-Length: 12071
+Cache-Control: max-age=3600, public
+Keep-Alive: timeout=2, max=96
+Connection: Keep-Alive
+Content-Type: text/css
+ ctid 5 uncompressed-len 0 net-response-time-onstart 361 net-response-time-onstop 362   /'

@@ -1,0 +1,6 @@
+2020/04/06-20:36:24.444 9afb Reusing MANIFEST /home/alexander/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2020/04/06-20:36:24.444 9afb Recovering log #4
+2020/04/06-20:36:24.445 9afb Reusing old log /home/alexander/.config/google-chrome/Default/Local Storage/leveldb/000004.log 
+2020/04/06-20:36:39.507 9c13 Level-0 table #7: started
+2020/04/06-20:36:39.514 9c13 Level-0 table #7: 12508 bytes OK
+2020/04/06-20:36:39.517 9c13 Delete type=0 #4

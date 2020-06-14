@@ -1,0 +1,8 @@
+; vim:ft=dosini
+
+[colors]
+foreground = #FFe5e9f0
+background = #883b4252
+active-background = #55d8dee9
+urgent = #bf616a
+urgent-background = #55ebcb8b

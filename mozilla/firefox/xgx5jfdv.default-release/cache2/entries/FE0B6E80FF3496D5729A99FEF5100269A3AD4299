@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal and Business Financial Services | Alerus</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://alerus.com/wp-content/themes/alerus/img/favicon.ico">
+	<!-- Apple Icons
+	<link rel="apple-touch-icon" href="https://alerus.com/wp-content/themes/alerus/img/apple-touch-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://alerus.com/wp-content/themes/alerus/img/apple-touch-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://alerus.com/wp-content/themes/alerus/img/apple-touch-iphone4.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="https://alerus.com/wp-content/themes/alerus/img/apple-touch-ipad-retina.png" />
+	-->
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5GSPC9S');</script>
+	<!-- End Google Tag Manager -->
+	
+	
+<!-- This site is optimized with the Yoast SEO plugin v12.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Find financial confidence with services, technology and proactive guidance that supports you in your daily life and long-term goals."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://alerus.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Personal and Business Financial Services | Alerus" />
+<meta property="og:description" content="Find financial confidence with services, technology and proactive guidance that supports you in your daily life and long-term goals." />
+<meta property="og:url" content="https://alerus.com/" />
+<meta property="og:site_name" content="Alerus Financial" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Find financial confidence with services, technology and proactive guidance that supports you in your daily life and long-term goals." />
+<meta name="twitter:title" content="Personal and Business Financial Services | Alerus" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://alerus.com/#website","url":"https://alerus.com/","name":"Alerus Financial","potentialAction":{"@type":"SearchAction","target":"https://alerus.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://alerus.com/#webpage","url":"https://alerus.com/","inLanguage":"en-US","name":"Personal and Business Financial Services | Alerus","isPartOf":{"@id":"https://alerus.com/#website"},"datePublished":"2015-08-18T16:24:44+00:00","dateModified":"2020-06-11T19:43:20+00:00","description":"Find financial confidence with services, technology and proactive guidance that supports you in your daily life and long-term goals."}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Alerus Financial &raquo; Home Comments Feed" href="https://alerus.com/home/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://alerus.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='inline-tweet-sharer-style-css'  href='https://alerus.com/wp-content/plugins/inline-tweet-sharer/inline-tweet-sharer.css?ver=2.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='site-css'  href='https://alerus.com/wp-content/themes/alerus/style.css?ver=1591925452' type='text/css' media='all' />
+<link rel='stylesheet' id='googlefont-sourcesans-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C600&#038;display=swap&#038;ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='googlefont-montserrat-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C700&#038;display=swap&#038;ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='updates-css'  href='https://alerus.com/wp-content/themes/alerus/css/updates.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='https://alerus.com/wp-content/themes/alerus/css/print_styles.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://alerus.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.11' type='text/css' media='all' />
+<script type='text/javascript' src='https://alerus.com/wp-content/themes/alerus/js/app.js?ver=1591925452'></script>
+<script type='text/javascript' src='https://alerus.com/wp-content/themes/alerus/js/jquery.js?ver=1591925452'></script>
+<script type='text/javascript' src='https://alerus.com/wp-content/plugins/inline-tweet-sharer/inline-tweet-sharer.js?ver=2.3.2'></script>
+<link rel='https://api.w.org/' href='https://alerus.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://alerus.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://alerus.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.4" />
+<link rel='shortlink' href='https://alerus.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://alerus.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Falerus.com%2F" />
+    <script type="text/javascript" src="https://100040560.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript">
+    _etmc.push(["setOrgId", "100040560"]);
+    _etmc.push(["trackPageView"]);
+    </script>
+    <link rel="icon" href="https://alerus.com/wp-content/uploads/2020/03/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://alerus.com/wp-content/uploads/2020/03/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://alerus.com/wp-content/uploads/2020/03/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://alerus.com/wp-content/uploads/2020/03/cropped-favicon-270x270.png" />
+<script>NS_CSM_td=2445522912;NS_CSM_pd=275116665;NS_CSM_u="/clm10";NS_CSM_an="af_action_log_10.200.12.5_web_csm_sec";</script><script type="text/javascript">function sendTimingInfoInit(){setTimeout(sendTimingInfo,0)}function sendTimingInfo(){var wp=window.performance;if(wp){var c1,c2,t;c1=wp.timing;if(c1){var cm={};cm.ns=c1.navigationStart;if((t=c1.unloadEventStart)>0)cm.us=t;if((t=c1.unloadEventEnd)>0)cm.ue=t;if((t=c1.redirectStart)>0)cm.rs=t;if((t=c1.redirectEnd)>0)cm.re=t;cm.fs=c1.fetchStart;cm.dls=c1.domainLookupStart;cm.dle=c1.domainLookupEnd;cm.cs=c1.connectStart;cm.ce=c1.connectEnd;if((t=c1.secureConnectionStart)>0)cm.scs=t;cm.rqs=c1.requestStart;cm.rss=c1.responseStart;cm.rse=c1.responseEnd;cm.dl=c1.domLoading;cm.di=c1.domInteractive;cm.dcls=c1.domContentLoadedEventStart;cm.dcle=c1.domContentLoadedEventEnd;cm.dc=c1.domComplete;if((t=c1.loadEventStart)>0)cm.ls=t;if((t=c1.loadEventEnd)>0)cm.le=t;cm.tid=NS_CSM_td;cm.pid=NS_CSM_pd;cm.ac=NS_CSM_an;var xhttp=new XMLHttpRequest();if(xhttp){var JSON=JSON||{};JSON.stringify=JSON.stringify||function(ob){var t=typeof(ob);if(t!="object"||ob===null){if(t=="string")ob='"'+ob+'"';return String(ob);}else{var n,v,json=[],arr=(ob&&ob.constructor==Array);for(n in ob){v=ob[n];t=typeof(v);if(t=="string")v='"'+v+'"';else if(t=="object"&&v!==null)v=JSON.stringify(v);json.push((arr?"":'"'+n+'":')+String(v));}return(arr?"[":"{")+String(json)+(arr?"]":"}");}};xhttp.open("POST",NS_CSM_u,true);xhttp.send(JSON.stringify(cm));}}}}if(window.addEventListener)window.addEventListener("load",sendTimingInfoInit,false);else if(window.attachEvent)window.attachEvent("onload",sendTimingInfoInit);else window.onload=sendTimingInfoInit;</script></head>
+<body class="home page-template-default page page-id-11">
+<!-- Skip Links -->
+<div class="skip-link" role="navigation" aria-label="Skip to main content">
+  <a href="#main">Skip to main content</a>
+</div>
+<!--Universal Analytics here-->
+
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GSPC9S"
+		height="0" width="0" style="display:none;visibility:hidden" title="GTM no-script"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+<div id="dark-overlay"></div>
+<header id="header">
+	<div class="container">
+		<a href="https://alerus.com" id="logo">Alerus Financial Logo</a>
+		<a href="#" id="login-btn" role="button" aria-label="View Login Options">Log in</a>
+		<div id="login-form">
+			<div role="dialog" aria-label="Alerus Network login options" id="login">
+				<label for="account_type">Account type</label>
+				<select name="account_type" id="account_type" class="select-css">
+          <option value="">ACCOUNT TYPE</option>
+					 selected='selected'<option value="https://login.alerus.com/" selected='selected'>MY ALERUS</option><option value="https://alerus.olbanking.com/smallbusiness/auth">Small Business Banking</option><option value="https://alerus.olbanking.com/">Business Banking</option><option value="https://www.yourmortgageonline.com/?conn=C11CC368-6675-4D3C-9DB5-9FAB4E344320">Mortgage</option><option value="https://advisor.envestnet.com/secure/app.jsp?_channel=oak&b=no">Wealth Access</option><option value="https://www.netxinvestor.com/web/netxinvestor/login">Securities</option><option value="https://www3.alerusfinancial.com/Weblink/logon/frmlogon.aspx?ReturnUrl=%2fweblink%2fDefault.aspx">Trust & Investments</option><option value="https://www.myaccountaccess.com/onlineCard/login.do?theme=elan1&loc=7315">Credit Card</option><option value="https://www5.alerusfinancial.com/enroll.nsf/smb1">Small Business Enrollment</option>	      </select>
+				<button class="btn" type="button" id="go-button">Go</button>
+			</div>
+		</div>
+		<div id="mobile-toggle">
+			<div></div>
+		</div>
+		<nav aria-label="Main Menu">
+			<ul>
+				<!--
+				<li id="main-search">
+					<form action="https://alerus.com" name="search_form"><div id="search-toggle"></div>
+						<input type="text" name="s" value="" placeholder="Search..." />
+						<input type="submit" value="submit" name="submit" class="btn" />
+					</form>
+				</li>
+				-->
+				<li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a title="Learn more about Your Life products and services" href="https://alerus.com/your-life/" data-callout-item="531" data-callout="523" aria-haspopup="true" aria-expanded="false" aria-label="Learn more about Your Life products and services">Your Life</a>
+<ul class="sub-menu">
+	<li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-life/my-goals/" data-callout="537" aria-haspopup="true" aria-expanded="false" aria-label="My Goals">My Goals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/manage-debt/" data-callout="538" aria-label="Manage Debt">Manage Debt</a></li>
+		<li id="menu-item-583" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/prepare-for-emergencies/" data-callout="539" aria-label="Prepare for Emergencies">Prepare for Emergencies</a></li>
+		<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/purchase-a-home/" data-callout="540" aria-label="Purchase a Home">Purchase a Home</a></li>
+		<li id="menu-item-582" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/plan-for-retirement/" data-callout="541" aria-label="Plan for Retirement">Plan for Retirement</a></li>
+		<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/improve-financial-fitness/" data-callout="542" aria-label="Improve my Financial Fitness">Improve my Financial Fitness</a></li>
+		<li id="menu-item-584" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/protect-from-fraud/" data-callout="543" aria-label="Protect from Fraud">Protect from Fraud</a></li>
+		<li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/contact-advisor/" data-callout="544" aria-label="Talk to an Advisor">Talk to an Advisor</a></li>
+	</ul>
+</li>
+	<li id="menu-item-591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-life/save-and-spend/" data-callout="545" aria-haspopup="true" aria-expanded="false" aria-label="Save &#038; Spend">Save &#038; Spend</a>
+	<ul class="sub-menu">
+		<li id="menu-item-592" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/checking/" data-callout="546" aria-label="Checking">Checking</a></li>
+		<li id="menu-item-594" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/debit-cards/" data-callout="548" aria-label="Debit Cards">Debit Cards</a></li>
+		<li id="menu-item-600" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/savings/" data-callout="551" aria-label="Savings">Savings</a></li>
+		<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/financial-planning/" data-callout="556" aria-label="Financial Planning">Financial Planning</a></li>
+		<li id="menu-item-598" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/investing/" data-callout="557" aria-label="Investing">Investing</a></li>
+		<li id="menu-item-11733" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/wealth-management/" data-callout="11705" aria-label="Wealth Management">Wealth Management</a></li>
+		<li id="menu-item-11565" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/save-and-spend/ira/" data-callout="11502" aria-label="IRAs">IRAs</a></li>
+	</ul>
+</li>
+	<li id="menu-item-571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-life/borrow/" data-callout="559" aria-haspopup="true" aria-expanded="false" aria-label="Borrow">Borrow</a>
+	<ul class="sub-menu">
+		<li id="menu-item-576" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/borrow/mortgage/" data-callout="560" aria-label="Mortgage">Mortgage</a></li>
+		<li id="menu-item-574" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/borrow/home-equity/" data-callout="562" aria-label="Home Equity">Home Equity</a></li>
+		<li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/borrow/personal-loans/" data-callout="563" aria-label="Personal Loans">Personal Loans</a></li>
+		<li id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/borrow/lines-of-credit/" data-callout="564" aria-label="Lines of Credit">Lines of Credit</a></li>
+		<li id="menu-item-572" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/borrow/credit-cards/" data-callout="565" aria-label="Credit Cards">Credit Cards</a></li>
+	</ul>
+</li>
+	<li id="menu-item-587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-life/online-access/" data-callout="567" aria-haspopup="true" aria-expanded="false" aria-label="Online Access">Online Access</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2861" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/online-access/my-alerus/" data-callout="568" aria-label="MY ALERUS">MY ALERUS</a></li>
+		<li id="menu-item-588" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/online-access/mobile-apps/" data-callout="569" aria-label="Mobile Apps">Mobile Apps</a></li>
+		<li id="menu-item-2693" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://open.alerus.com/workspaces/servlet/SmartForm.html?formCode=alerusdao" aria-label="Open an Account">Open an Account</a></li>
+	</ul>
+</li>
+	<li id="menu-item-10564" class="d-xl-none menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-life/my-goals/contact-advisor/" data-callout="544" aria-label="Talk to an Advisor">Talk to an Advisor</a></li>
+</ul>
+</li>
+<li id="menu-item-532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-business/" data-callout-item="532" data-callout="525" aria-haspopup="true" aria-expanded="false" aria-label="Your Business">Your Business</a>
+<ul class="sub-menu">
+	<li id="menu-item-1666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-business/planning-advice/" data-callout="1321" aria-haspopup="true" aria-expanded="false" aria-label="Planning &#038; Advice">Planning &#038; Advice</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1667" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/grow-my-business/" data-callout="1322" aria-label="Grow my Business">Grow my Business</a></li>
+		<li id="menu-item-1668" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/manage-cash-flow/" data-callout="1323" aria-label="Manage Cash Flow">Manage Cash Flow</a></li>
+		<li id="menu-item-1669" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/attracting-employees/" data-callout="1324" aria-label="Attract &#038; Retain Employees">Attract &#038; Retain Employees</a></li>
+		<li id="menu-item-1678" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/protecting-your-business/" data-callout="1325" aria-label="Protect my Business">Protect my Business</a></li>
+		<li id="menu-item-1679" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/transitioning/" data-callout="1326" aria-label="Transition my Business">Transition my Business</a></li>
+		<li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/contact-advisor/" data-callout="1327" aria-label="Talk to a Business Advisor">Talk to a Business Advisor</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-business/operate/" data-callout="1328" aria-haspopup="true" aria-expanded="false" aria-label="Operate">Operate</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/deposit-accounts/" data-callout="1329" aria-label="Deposit Accounts">Deposit Accounts</a></li>
+		<li id="menu-item-1672" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/treasury-management/" data-callout="1330" aria-label="Treasury Management">Treasury Management</a></li>
+		<li id="menu-item-1673" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/loans-lines-of-credit/" data-callout="1331" aria-label="Loans &#038; Lines of Credit">Loans &#038; Lines of Credit</a></li>
+		<li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/business-credit-cards/" data-callout="1332" aria-label="Business Credit Cards">Business Credit Cards</a></li>
+		<li id="menu-item-1682" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/investments/" data-callout="1333" aria-label="Investments">Investments</a></li>
+		<li id="menu-item-1683" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/nonprofit-solutions/" data-callout="1334" aria-label="Nonprofit Solutions">Nonprofit Solutions</a></li>
+		<li id="menu-item-1684" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/payroll-and-tax-filing/" data-callout="1335" aria-label="Payroll &#038; Tax Filing">Payroll &#038; Tax Filing</a></li>
+		<li id="menu-item-1685" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/time-labor/" data-callout="1336" aria-label="Time &#038; Labor">Time &#038; Labor</a></li>
+		<li id="menu-item-1686" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/operate/hr-management/" data-callout="1337" aria-label="HR Management">HR Management</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-business/employee-benefits/" data-callout="1338" aria-haspopup="true" aria-expanded="false" aria-label="Employee Benefits">Employee Benefits</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1675" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/employee-benefits/financial-fitness-tools/" data-callout="1339" aria-label="Financial Fitness Tools">Financial Fitness Tools</a></li>
+		<li id="menu-item-1676" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/employee-benefits/employee-retirement/" data-callout="1340" aria-label="Employee Retirement">Employee Retirement</a></li>
+		<li id="menu-item-1677" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/employee-benefits/retirement-plans/" data-callout="1341" aria-label="Retirement Plan Advisory Services">Retirement Plan Advisory Services</a></li>
+		<li id="menu-item-1687" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/employee-benefits/health-savings-spending-accounts/" data-callout="1342" aria-label="Health Savings &#038; Spending Accounts">Health Savings &#038; Spending Accounts</a></li>
+		<li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/employee-benefits/cobra/" data-callout="1343" aria-label="COBRA">COBRA</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/your-business/online-access/" data-callout="1344" aria-haspopup="true" aria-expanded="false" aria-label="Online Access">Online Access</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1690" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/online-access/online-banking/" data-callout="1345" aria-label="Online Banking">Online Banking</a></li>
+		<li id="menu-item-1691" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/online-access/mobile-banking/" data-callout="1346" aria-label="Business Mobile Banking">Business Mobile Banking</a></li>
+		<li id="menu-item-2208" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://login.alerus.com/" aria-label="Retirement Plan Gateway">Retirement Plan Gateway</a></li>
+	</ul>
+</li>
+	<li id="menu-item-10571" class="d-xl-none menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/your-business/planning-advice/contact-advisor/" data-callout="1327" aria-label="Talk to a Business Advisor">Talk to a Business Advisor</a></li>
+</ul>
+</li>
+<li id="menu-item-2237" class="financial-advice menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a data-callout-item="2237" aria-haspopup="true" aria-expanded="false" aria-label="Financial Advice">Financial Advice</a>
+<ul class="sub-menu">
+	<li id="menu-item-1697" class="your-life menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="https://alerus.com/financial-advice/personal/" aria-haspopup="true" aria-expanded="false" aria-label="For Your Life">For Your Life</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2702" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/manage-debt/" aria-label="Manage Debt">Manage Debt</a></li>
+		<li id="menu-item-2701" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/prepare-for-emergencies/" aria-label="Prepare for Emergencies">Prepare for Emergencies</a></li>
+		<li id="menu-item-2703" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/purchase-a-home/" aria-label="Purchase a Home">Purchase a Home</a></li>
+		<li id="menu-item-2699" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/plan-for-retirement/" aria-label="Plan for Retirement">Plan for Retirement</a></li>
+		<li id="menu-item-2698" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/improve-my-financial-fitness/" aria-label="Improve my Financial Fitness">Improve my Financial Fitness</a></li>
+		<li id="menu-item-2704" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/protect-from-fraud/" aria-label="Protect from Fraud">Protect from Fraud</a></li>
+		<li id="menu-item-2839" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://alerus.com/financial-advice/personal/" aria-label="View all Articles for Your Life">View all Articles for Your Life</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1696" class="your-business menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="https://alerus.com/financial-advice/business/" aria-haspopup="true" aria-expanded="false" aria-label="For Your Business">For Your Business</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3033" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/grow-my-business/" aria-label="Grow My Business">Grow My Business</a></li>
+		<li id="menu-item-3138" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/manage-cash-flow/" aria-label="Manage Cash Flow">Manage Cash Flow</a></li>
+		<li id="menu-item-3035" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/attract-retain-employees/" aria-label="Attract & Retain Employees">Attract &#038; Retain Employees</a></li>
+		<li id="menu-item-3139" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/protect-my-business/" aria-label="Protect My Business">Protect My Business</a></li>
+		<li id="menu-item-3140" class="menu-item menu-item-type-taxonomy menu-item-object-financial_advice_taxonomy"><a href="https://alerus.com/financial-advice/category/transition-my-business/" aria-label="Transition My Business">Transition My Business</a></li>
+		<li id="menu-item-2231" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://alerus.com/financial-advice/business/" aria-label="View all Articles for your Business">View all Articles for your Business</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2779" class="calculators menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/financial-calculators/" data-callout="967" aria-label="Financial Calculators">Financial Calculators</a></li>
+</ul>
+</li>
+<li id="menu-item-1774" class="contactus menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://alerus.com/contact/" data-callout-item="1774" data-callout="830" aria-haspopup="true" aria-expanded="false" aria-label="Contact">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-7876" class="d-xl-none menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/contact/" data-callout="830" aria-label="Client Service Center">Client Service Center</a></li>
+	<li id="menu-item-2854" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/contact/contact-form/" data-callout="529" aria-label="Contact Form">Contact Form</a></li>
+	<li id="menu-item-3253" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/about/our-team/" data-callout="1037" aria-label="Our Team">Our Team</a></li>
+	<li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/contact/report-fraud/" data-callout="617" aria-label="Report Fraud">Report Fraud</a></li>
+	<li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/contact/faqs/" data-callout="619" aria-label="FAQs">FAQs</a></li>
+	<li id="menu-item-4145" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://alerus.com/contact/feedback-form/" data-callout="2019" aria-label="Send Us Feedback">Send Us Feedback</a></li>
+</ul>
+</li>
+				<li id="search-menu" class="search-menu">
+					<a href="#">&nbsp;</a>
+					<ul class="sub-menu">
+						<li>
+							<form action="https://alerus.com" name="search_form">
+								<input type="text" name="s" value="" placeholder="Search..." />
+								<!--<input type="submit" name="submit" value=" " title="Submit" class="btn" />-->
+								<button type="submit" title="Submit" class="btn"><span></span></button>
+							</form>
+						</li>
+					</ul>
+				</li>
+				<li class="locations">
+					<a href="https://alerus.com/locations/" aria-label="Find a location near you">Locations</a>
+				</li>
+				<li class="search"><a href="#">Search</a></li>
+			</ul>
+														<div class="menu-item-523">
+							<div class="nav-cta">
+								<div class="nav-cta-img" style="background-image:url(https://alerus.com/wp-content/uploads/2019/12/mega-menu-girl-in-city.jpg);"></div>
+								<h3>Take Control of your Financial Health</h3>
+																	<p><a href="https://alerus.com/your-life/my-goals/contact-advisor/" class="btn">Talk to an Advisor</a></p>
+															</div>
+						</div>
+																					<div class="menu-item-525">
+							<div class="nav-cta">
+								<div class="nav-cta-img" style="background-image:url(https://alerus.com/wp-content/uploads/2019/12/mega-menu-man-at-work.jpg);"></div>
+								<h3>Take Control of your Financial Health</h3>
+																	<p><a href="https://alerus.com/your-business/planning-advice/contact-advisor/" class="btn">Talk to an Advisor</a></p>
+															</div>
+						</div>
+																					<div class="menu-item-830">
+							<div class="nav-cta">
+								<div class="nav-cta-img" style="background-image:url(https://alerus.com/wp-content/uploads/2019/10/placeholder-294x294.jpg);"></div>
+								<h3>Get in Touch</h3>
+																	<p><a href="https://alerus.com/contact/" class="btn">Client Service Center</a></p>
+															</div>
+						</div>
+																					<div class="menu-item-m2237">
+							<div class="nav-cta">
+								<div class="nav-cta-img" style="background-image:url(https://alerus.com/wp-content/uploads/2019/11/advisor.png);"></div>
+								<h3>Make smart Financial Choices</h3>
+																	<p><a href="https://alerus.com/financial-calculators/" class="btn">View Calculators</a></p>
+															</div>
+						</div>
+										
+			<style>
+			.pac-container {
+				z-index: 10000;
+			}
+			</style>
+							<form action="https://alerus.com/locations/" name="location_search_header" method="get">
+					<h3>Find a location or ATM</h3>
+					<div class="flex">
+						<input type="text" name="ziploc" value="" placeholder="Enter Zip code, city or address"
+							id="location_search_header" autocomplete="off" />
+						<button type="submit" class="location-btn btn">&nbsp;</button>
+					</div>
+				</form>
+					</nav>
+	</div>
+</header>
+<div id="hero" role="complementary" aria-label="Select Stream">
+	<div class="container">
+				<div class="hero-mobile" style="background-image:url(https://alerus.com/wp-content/uploads/2019/10/hero_mobile-748x1203.jpg"></div>
+					<div class="img-half img-left" style="background-image:url(https://alerus.com/wp-content/uploads/2019/11/hero1.jpg);"></div>
+			<div class="img-half img-right" style="background-image:url(https://alerus.com/wp-content/uploads/2019/11/hero2-768x523.jpg"></div>
+				<h1>Let your<br />
+financial future<br />
+take flight.</h1>
+		<div class="header-selector">
+			<a href="#" id="close-home-box">Close</a>
+			<a href="#" class="btn" data-select-type="for-life">For Your Life</a>
+			<a href="#" class="btn" data-select-type="for-business">For Your Business</a>
+			<div class="for-life hero-selector-content">
+										<a href="https://alerus.com/your-life/my-goals/purchase-a-home/">
+							<h3>Plan for your home purchase</h3>
+							<p>Confidently buy the home you want.</p>
+						</a>
+												<a href="https://alerus.com/your-life/my-goals/plan-for-retirement/">
+							<h3>Retire with confidence</h3>
+							<p>Set your goals and stay on track.</p>
+						</a>
+												<a href="https://alerus.com/your-life/my-goals/prepare-for-emergencies/">
+							<h3>Prepare for the unexpected</h3>
+							<p>Plan ahead and be ready for lifeâ€™s surprises.</p>
+						</a>
+												<a href="https://alerus.com/your-life/my-goals/improve-financial-fitness/">
+							<h3>Take control of your financial health</h3>
+							<p>Improve your overall financial fitness.</p>
+						</a>
+									</div>
+			<div class="for-business hero-selector-content">
+										<a href="https://alerus.com/your-business/planning-advice/grow-my-business/">
+							<h3>Grow your business</h3>
+							<p>Confidently take your business to the next level.</p>
+						</a>
+												<a href="https://alerus.com/your-business/planning-advice/manage-cash-flow/">
+							<h3>Manage cash flow</h3>
+							<p>Keep your business healthy with cash flow management.</p>
+						</a>
+												<a href="https://alerus.com/your-business/planning-advice/attracting-employees/">
+							<h3>Attract and retain employees</h3>
+							<p>Invest in your strongest asset with meaningful benefits.</p>
+						</a>
+												<a href="https://alerus.com/your-business/planning-advice/transitioning/">
+							<h3>Plan for ownership transfer</h3>
+							<p>Ensure your business will continue to thrive. </p>
+						</a>
+									</div>
+		</div>
+	</div>
+</div>
+<div id="main">
+	<div class="container">
+		<article>
+			<h4>Less stress. More confidence.</h4>
+			<h2>Ready to tackle your personal debt or take your business to the next level? Wherever youâ€™re headed, letâ€™s plot your course to financial confidence â€” from beginning to end. </h2>
+						<a href="https://alerus.com/contact/" class="btn btn-reversed">Let's Get Started</a>
+		</article>
+	</div>
+</div>
+
+
+	<div class="cta-box" role="complementary" aria-label="Information video content">
+		<div class="container">
+							<div class="cta-box-left">
+					<div class="transparent-border">
+						<div href="#" class="video-thumb wistia" style="background-image:url(https://alerus.com/wp-content/uploads/2019/10/video_thumb-569x325.jpg)">
+							<div class="wistia"><script src="https://fast.wistia.com/embed/medias/nufivx7qxb.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_nufivx7qxb videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div></div>
+						</div>
+					</div><!-- /transparent-border -->
+											<div class="transcript-container">
+							<a href="#" class="transcript" role="button">View transcript<span> (X)</span></a>
+							<div class="transcript-copy">
+								(music plays)<br></br>
+When it comes to your dreams, we say, go after them. And know we will be there every step of the way with proactive advice and technology that supports financial wellness. Welcome to a whole new way to manage your financial future. 
+
+<br></br>We are reinventing the way you interact with your accounts to give you the kind of information and support that empowers better choices so you can set and achieve your financial goals. 
+
+<br></br>Your journey is unique and deserves an approach that meets you exactly where you are so you can fully experience, explore, achieve the life you want to live.
+
+<br></br> (music ends)<br /><br />
+								<a href="#" class="close" role="button">Close transcript</a>
+							</div>
+						</div>
+									</div><!-- /cta-box-left -->
+						<div class="cta-box-right">
+				<h2>Your personal<br>financial wellness hub</h2>
+				<p><a href="https://alerus.com/your-life/online-access/my-alerus/">MY ALERUS</a> uses your most current financial data to help you reach your next milestone and improve your overall financial health.</p>
+									<a href="https://alerus.com/your-life/online-access/my-alerus/" class="btn"  aria-label="Learn more - Your personal<br>financial wellness hub">About MY ALERUS</a>
+							</div><!-- /cta-box-right -->
+		</div>
+	</div>
+<div class="quote-bg"
+		 role="complementary" aria-label="Testimonials and Image Slider">
+	
+	<div class="quote">
+				<div class="quote-inner">
+						<div class="quote-img">
+				<img src="https://alerus.com/wp-content/uploads/2019/11/quote-andersons.jpg" alt="quote thumbnail" class="quote-thumb img-fluid" />
+			</div>
+										<div class="quote-text">
+					<h2>&#8220;Alerus helped us achieve our goals by making our whole financial situation easy to digest and very clear.&#8221;</h2>
+					<p class="quote-source">Kyle & Collette													<br /><a href="https://alerus.wistia.com/medias/tqnxxm8ap8" target="_blank">Learn more about their experience</a>											</p>
+				</div><!-- /quote-text -->
+					</div>
+				<div class="quote-inner">
+						<div class="quote-img">
+				<img src="https://alerus.com/wp-content/uploads/2019/11/quote-midstates.jpg" alt="quote thumbnail" class="quote-thumb img-fluid" />
+			</div>
+										<div class="quote-text">
+					<h2>&#8220;I have put Alerus to the ultimate test, and they made me feel comfortable. That's the most anyone can ask for when they own a business.&#8221;</h2>
+					<p class="quote-source">Lisa Bortnem-Wiser													<br />Managing Partner, Midstates Wireless 															</p>
+				</div><!-- /quote-text -->
+					</div>
+				<div class="quote-inner">
+						<div class="quote-img">
+				<img src="https://alerus.com/wp-content/uploads/2019/11/quote-happy-harrys.jpg" alt="quote thumbnail" class="quote-thumb img-fluid" />
+			</div>
+										<div class="quote-text">
+					<h2>&#8220;It's been a lifetime of work for my father, and a lifetime of work for me â€” and we couldn't have done it without Alerus.&#8221;</h2>
+					<p class="quote-source">Hal Gershman													<br />Owner, Happy Harryâ€™s Bottle Shop<br><a href="https://alerus.wistia.com/medias/owsc5mz0c3" target="_blank">Learn more about Hal's experience</a>											</p>
+				</div><!-- /quote-text -->
+					</div>
+				<div class="quote-inner">
+						<div class="quote-img">
+				<img src="https://alerus.com/wp-content/uploads/2019/12/Jon-294x294.png" alt="quote thumbnail" class="quote-thumb img-fluid" />
+			</div>
+										<div class="quote-text">
+					<h2>&#8220;The reasons why, ultimately, we went with Alerus...they were big enough to handle our needs...but not so big that they weren't personal.&#8221;</h2>
+					<p class="quote-source">Jon Kirkhoff													<br />Principal, JTH Lighting											</p>
+				</div><!-- /quote-text -->
+					</div>
+			</div>
+</div>
+
+<div class="full-callout" style="background-image:url(https://alerus.com/wp-content/uploads/2019/10/cta_bg-1550x450.jpg);"
+		 role="complementary" aria-label="Financial Confidence">
+		<div class="cta-mobile-bg" style="background-image:url(https://alerus.com/wp-content/uploads/2019/10/cta_mobile_bg-748x1270.jpg)"></div>
+		<div class="container">
+		<p>Start your path to </p><h2>Financial Confidence</h2>
+					<div>
+				<a href="https://alerus.com/contact/contact-form/" class="btn"
+					 aria-label="Learn More - Financial Confidence - Contact Us">
+					 Contact Us</a>
+			</div>
+		
+			</div>
+</div>
+
+
+<footer id="footer">
+	<div id="top-footer-nav">
+				<div class="tabs">
+			<ul>
+				<li><a href="#" data-tab="1"							 aria-label="Open Your Life menu">Your Life</a></li>
+				<li><a href="#" data-tab="2"							 aria-label="Open Business menu">Your Business</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div data-content="1" class="tab-content">
+										<div class="col1 col">
+							<ul>
+<li><a href="https://alerus.com/your-life/">Overview</a></li>
+</ul>
+						</div>
+						<div class="col2 col">
+							<ul>
+<li>My Goals</li>
+<li><a href="https://alerus.com/your-life/my-goals/manage-debt/">Manage Debt</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/prepare-for-emergencies/">Prepare for Emergencies</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/purchase-a-home/">Purchase a Home</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/plan-for-retirement/">Plan for Retirement</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/improve-financial-fitness/">Improve my Financial Fitness</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/protect-from-fraud/">Protect from Fraud</a></li>
+<li><a href="https://alerus.com/your-life/my-goals/contact-advisor/">Talk to an Advisor</a></li>
+</ul>
+						</div>
+						<div class="col3 col">
+							<ul>
+<li>Save &amp; Spend</li>
+<li><a href="https://alerus.com/your-life/save-and-spend/checking/">Checking</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/debit-cards/">Debit Cards</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/savings/">Savings</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/financial-planning/">Financial Planning</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/investing/">Investing</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/wealth-management/">Wealth Management</a></li>
+<li><a href="https://alerus.com/your-life/save-and-spend/ira/">IRAs</a></li>
+</ul>
+						</div>
+						<div class="col4 col">
+							<ul>
+<li>Borrow</li>
+<li><a href="https://alerus.com/your-life/borrow/mortgage/">Mortgage</a></li>
+<li><a href="https://alerus.com/your-life/borrow/home-equity/">Home Equity</a></li>
+<li><a href="https://alerus.com/your-life/borrow/personal-loans/">Personal Loans</a></li>
+<li><a href="https://alerus.com/your-life/borrow/lines-of-credit/">Lines of Credit</a></li>
+<li><a href="https://alerus.com/your-life/borrow/credit-cards/">Credit Cards</a></li>
+</ul>
+						</div>
+						<div class="col5 col">
+							<ul>
+<li>Online Access</li>
+<li><a href="https://alerus.com/your-life/online-access/my-alerus/">MY ALERUS</a></li>
+<li><a href="https://alerus.com/your-life/online-access/mobile-apps/">Mobile Apps</a></li>
+<li><a href="https://open.alerus.com/workspaces/servlet/SmartForm.html?formCode=alerusdao" target="_blank" rel="noopener">Open an Account</a></li>
+</ul>
+						</div>
+									</div>
+			<div data-content="2" class="tab-content">
+										<div class="col1 col">
+							<ul>
+<li><a href="https://alerus.com/your-business/">Overview</a></li>
+</ul>
+						</div>
+						<div class="col2 col">
+							<ul>
+<li>Planning &amp; Advice</li>
+<li><a href="https://alerus.com/your-business/planning-advice/grow-my-business/">Grow my Business</a></li>
+<li><a href="https://alerus.com/your-business/planning-advice/manage-cash-flow/">Manage Cash Flow</a></li>
+<li><a href="https://alerus.com/your-business/planning-advice/attracting-employees/">Attract &amp; Retain Employees</a></li>
+<li><a href="https://alerus.com/your-business/planning-advice/protecting-your-business/">Protect my Business</a></li>
+<li><a href="https://alerus.com/your-business/planning-advice/transitioning/">Transition my Business</a></li>
+<li><a href="https://alerus.com/your-business/planning-advice/contact-advisor/">Talk to a Business Advisor</a></li>
+</ul>
+						</div>
+						<div class="col3 col">
+							<ul>
+<li>Operate</li>
+<li><a href="https://alerus.com/your-business/operate/deposit-accounts/">Deposit Accounts</a></li>
+<li><a href="https://alerus.com/your-business/operate/treasury-management/">Treasury Management</a></li>
+<li><a href="https://alerus.com/your-business/operate/loans-lines-of-credit/">Loans &amp; Lines of Credit</a></li>
+<li><a href="https://alerus.com/your-business/operate/business-credit-cards/">Business Credit Cards</a></li>
+<li><a href="https://alerus.com/your-business/operate/investments/">Investing for your Business</a></li>
+<li><a href="https://alerus.com/your-business/operate/nonprofit-solutions/">Nonprofit Solutions</a></li>
+<li><a href="https://alerus.com/your-business/operate/payroll-and-tax-filing/">Payroll &amp; Tax Filing</a></li>
+<li><a href="https://alerus.com/your-business/operate/time-labor/">Time &amp; Labor</a></li>
+<li><a href="https://alerus.com/your-business/operate/hr-management/">HR Management</a></li>
+</ul>
+						</div>
+						<div class="col4 col">
+							<ul>
+<li>Employee Benefits</li>
+<li><a href="https://alerus.com/your-business/employee-benefits/financial-fitness-tools/">Financial Fitness Tools</a></li>
+<li><a href="https://alerus.com/your-business/employee-benefits/employee-retirement/">Employee Retirement</a></li>
+<li><a href="https://alerus.com/your-business/employee-benefits/retirement-plans/">Retirement Plan Advisory Services</a></li>
+<li><a href="https://alerus.com/your-business/employee-benefits/health-savings-spending-accounts/">Health Savings &amp; Spending Accounts</a></li>
+<li><a href="https://alerus.com/your-business/employee-benefits/cobra/">COBRA</a></li>
+</ul>
+						</div>
+						<div class="col5 col">
+							<ul>
+<li>Online Access</li>
+<li><a href="https://alerus.com/your-business/online-access/online-banking/">Online Banking</a></li>
+<li><a href="https://alerus.com/your-business/online-access/mobile-banking/">Business Mobile Banking</a></li>
+<li><a href="https://login.alerus.com/" target="_blank" rel="noopener">Retirement Plan Gateway</a></li>
+</ul>
+						</div>
+									</div>
+		</div>
+	</div>
+
+	<div class="container pt30">
+								<div class="col1 col">
+							<ul>
+<li><a href="https://alerus.com/financial-advice/">Financial Advice</a></li>
+<li><a href="https://alerus.com/financial-advice/">For your Life</a></li>
+<li><a href="https://alerus.com/financial-advice/">For your Business</a></li>
+<li><a href="https://alerus.com/financial-calculators/">Calculators</a></li>
+<li><a href="https://alerus.com/canadian-exchange-rates/">Canadian Exchange Rate</a></li>
+<li><a href="https://alerus.com/events/">Events</a></li>
+</ul>
+						</div>
+						<div class="col2 col">
+							<ul>
+<li><a href="https://alerus.com/about/">About</a></li>
+<li><a href="https://alerus.com/about/leadership/">Leadership &amp; Board</a></li>
+<li><a href="https://alerus.com/about/our-team/">Our Team</a></li>
+<li><a href="https://alerus.com/about/community-giving/">Community Giving</a></li>
+<li><a href="http://investors.alerus.com/" target="_blank" rel="noopener">Investor Relations</a></li>
+<li><a href="https://alerus.com/newsroom/">Newsroom</a></li>
+<li><a href="https://alerus.com/about/careers/">Careers</a></li>
+</ul>
+						</div>
+						<div class="col3 col">
+							<ul>
+<li><a href="https://alerus.com/contact/">Contact</a></li>
+<li><a href="https://alerus.com/contact/">Client Service Center</a></li>
+<li><a href="https://alerus.com/contact/contact-form/">Contact Form</a></li>
+<li><a href="https://alerus.com/contact-us/report-fraud/">Report Fraud</a></li>
+<li><a href="https://alerus.com/contact-us/faqs/">FAQs</a></li>
+<li><a href="https://alerus.com/contact/feedback-form/">Send Us Feedback</a></li>
+</ul>
+						</div>
+						<div class="col4 col">
+							<ul>
+<li><a href="https://alerus.com/locations/">Locations</a></li>
+</ul>
+						</div>
+							</div>
+	<div class="social">
+		<div class="container">
+						<a href="https://www.facebook.com/alerusfinancial/" class="icon fb-icon" target="_blank">Facebook</a>
+						<a href="https://twitter.com/alerusfinancial" class="icon twitter-icon" target="_blank">Twitter</a>
+						<a href="https://www.instagram.com/alerusfinancial/" class="icon instagram-icon" target="_blank">Instagram</a>
+						<a href="https://www.linkedin.com/company/alerus-financial/" class="icon linkedin-icon" target="_blank">LinkedIn</a>
+						<a href="https://www.youtube.com/user/AlerusTV" class="icon youtube-icon" target="_blank">Youtube</a>
+				</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<span class="copy-symbol">&copy; Alerus Financial</span>
+			<span><a href="https://alerus.com/privacy-legal/">Privacy & Legal</a></span>
+			<span><a href="https://alerus.com/accessibility">Accessibility</a></span>
+						<span><span class="ico icon-equal-housing" aria-hidden="true"></span> Equal Housing Lender</span>
+		</div>
+	</div>
+</footer>
+<div id="disclaimer" role="complementary" aria-label="Page disclaimers">
+	<div class="container">
+	<p>Alerus Wealth Management provides products and services through Alerus Financial, N.A. (Alerus). Registered representatives of Alerus Securities may offer insurance and investment products through INFINEX INVESTMENTS, INC. Member FINRA/SIPC. Alerus Securities is a trade name of Alerus. Infinex and Alerus are not affiliated.</p>
+<p>Investment and insurance products are:</p>
+<div class="disclaimer-flex">
+<div>NOT A DEPOSIT</div>
+<div>NOT FDIC INSURED</div>
+<div>NOT GUARANTEED BY BANK</div>
+<div>NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY</div>
+<div>MAY GO DOWN IN VALUE</div>
+</div>
+<p>Deposit products offered by Alerus Financial, N.A. Member FDIC.</p>
+	</div>
+</div>
+<style>
+.cookie-notice {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  bottom: 40px;
+  padding: 40px 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  background-color: #fafafa;
+  font-size: 19px;
+  font-weight: lighter;
+  color: #666;
+  line-height: 1.3;
+}
+@media screen and (min-width: 992px) {
+  .cookie-notice {
+    padding: 50px 70px;
+  }
+}
+
+.cookie-notice .close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+.cookie-notice .close-button:hover {
+  color: #e4564a;
+}
+
+.cookie-notice .actions {
+  margin-top: 15px;
+}
+</style>
+
+<div class="cookie-notice" role="region" aria-label="Cookie policy notice" aria-describedby="cookie-notice-description">
+  <div class="close-button">&times;</div>
+  <div class="container">
+
+      <div id="cookie-notice-description">This site uses cookies to help provide the best user experience.</div>
+      <a href="https://alerus.com/privacy-legal/#privacy-statement">Read cookie policy</a>
+      <div class="actions">
+        <button class="btn small accept" type="button">I accept cookies</button>
+      </div>
+
+  </div><!-- /container -->
+</div><!-- /cookie-notice -->
+
+<script>
+(function( $ ) {
+	'use strict';
+
+  $(function() {
+    if (typeof Cookies.get('accept_cookies') == 'undefined') {
+      $('.cookie-notice').fadeIn();
+    }
+    $('button.accept').on('click', function(){
+      Cookies.set('accept_cookies', 1, { expires: 7 });
+      $('.cookie-notice').fadeOut();
+    })
+
+    $('.cookie-notice .close-button').on('click', function(){
+      Cookies.set('accept_cookies', 0, { expires: 7 });
+      $('.cookie-notice').fadeOut();
+    })
+  });
+
+})( jQuery );
+</script>
+
+	<div id="alert" role="alert" aria-label="Page Alerts">
+		<div class="container">
+      <a href="#" class="close" role="button" aria-label="Close site alerts">Close</a>
+                            					<h3>Online Business Banking</h3>
+          <p>Business Banking and Small Business Banking will be unavailable Friday, June 12 at 7:30 p.m. through Saturday, June 13 at 12:00 p.m. Central time due to scheduled maintenance. Please contact our Client Service Center at 800.279.3200 with any questions.</p>
+                  			                					<h3>COVID-19</h3>
+          <p>Learn about the steps we&#8217;re taking to help our clients, employees and communities during COVID-19.</p>
+          						<p><a href="https://alerus.com/coronavirus-covid-19-planning-information/" class="btn btn-alt-2"
+                  aria-label="Details on the alert Learn More">Learn More</a>
+						</p>
+                  					</div>
+	</div>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-rkp3WWvwMDJ8Xdr8UggErs4ZZacQho&#038;libraries=places%2Cgeometry&#038;ver=3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var params = {"speed_bump_exclusions":["login.alerus.com\/","apply.alerus.com\/","open.alerus.com\/workspaces\/servlet\/SmartForm.html","investors.alerus.com\/","www.calcxml.com\/calculators\/","alerus.com\/financial-advice\/category\/purchase-a-home\/","alerus.com\/your-life\/borrow\/mortgage\/","alerus.com\/your-life\/borrow\/mortgage\/","alerus.com\/privacy-legal\/","alerus.com\/privacy-legal\/","recruiting2.ultipro.com\/ALE1000ALFN\/JobBoard\/8c322eba-32b7-4c85-b4d2-e5a6c6cffb87\/","online1.elancard.com\/oad\/begin","web1.zixmail.net\/s\/login","alerus.wistia.com\/medias\/owsc5mz0c3"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://alerus.com/wp-content/themes/alerus/js/site.js?ver=1591925452'></script>
+<script type='text/javascript' src='https://alerus.com/wp-content/themes/alerus/js/locations.js?ver=1591925452'></script>
+<script type='text/javascript' src='https://alerus.com/wp-includes/js/wp-embed.min.js?ver=5.3.4'></script>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+//siteimprove code
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = 'https://siteimproveanalytics.com/js/siteanalyze_79442.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script>
+</body>
+</html>
+Hèï3      ^âÚÌ^âÚâAÅ#.           :https://alerus.com/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET request-Accept-Encoding gzip, deflate, br response-head HTTP/1.1 200 OK
+Date: Fri, 12 Jun 2020 01:30:52 GMT
+Server: Apache
+X-Pingback: https://alerus.com/xmlrpc.php
+Link: <https://alerus.com/wp-json/>; rel="https://api.w.org/", <https://alerus.com/>; rel=shortlink
+Vary: Accept-Encoding
+X-XSS-Protection: 1; mode=block
+X-Via-NSCOPI: 1.0
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=157680000
+ original-response-headers Date: Fri, 12 Jun 2020 01:30:52 GMT
+Server: Apache
+X-Pingback: https://alerus.com/xmlrpc.php
+Set-Cookie: alerts=%7B%22post_11%22%3A1591925452%7D; expires=Sat, 12-Jun-2021 01:30:52 GMT; Max-Age=31536000; path=/; domain=alerus.com
+Link: <https://alerus.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://alerus.com/>; rel=shortlink
+Vary: Accept-Encoding
+X-XSS-Protection: 1; mode=block
+Keep-Alive: timeout=5, max=86
+Connection: Keep-Alive
+X-Via-NSCOPI: 1.0
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: NSC_ESNS=81ad3721-dacc-1ee2-9678-66e416f9d444_1866563380_3842259079_00000000002175157657; Path=/; Expires=Fri, 12-Jun-2020 01:31:07 GMT
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=157680000
+ ctid 1 uncompressed-len 0 predictor::resource-count 53 predictor::https://alerus.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.4 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/plugins/inline-tweet-sharer/inline-tweet-sharer.css?ver=2.3.2 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/style.css?ver=1591925452 1,1,1591925452,4096 predictor::https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C600&display=swap&ver=1 1,1,1591925452,4096 predictor::https://fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C700&display=swap&ver=1 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/css/updates.css?ver=1 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/css/print_styles.css?ver=1 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.11 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/js/app.js?ver=1591925452 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/js/jquery.js?ver=1591925452 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/plugins/inline-tweet-sharer/inline-tweet-sharer.js?ver=2.3.2 1,1,1591925452,4096 predictor::https://www.googletagmanager.com/gtm.js?id=GTM-5GSPC9S 1,1,1591925452,4096 predictor::https://100040560.collect.igodigital.com/collect.js 1,1,1591925452,4096 predictor::https://www.google-analytics.com/analytics.js 1,1,1591925452,4096 predictor::https://snap.licdn.com/li.lms-analytics/insight.min.js 1,1,1591925452,4096 predictor::https://fast.wistia.com/embed/medias/nufivx7qxb.jsonp 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/E-v1.js 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/uploads/2019/11/quote-andersons.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/uploads/2019/11/quote-midstates.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/uploads/2019/11/quote-happy-harrys.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/uploads/2019/12/Jon-294x294.png 1,1,1591925452,4097 net-response-time-onstart 1055 net-response-time-onstop 1162 predictor::https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-rkp3WWvwMDJ8Xdr8UggErs4ZZacQho&libraries=places%2Cgeometry&ver=3 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/js/site.js?ver=1591925452 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/themes/alerus/js/locations.js?ver=1591925452 1,1,1591925452,4096 predictor::https://alerus.com/wp-includes/js/wp-embed.min.js?ver=5.3.4 1,1,1591925452,4096 predictor::https://siteimproveanalytics.com/js/siteanalyze_79442.js 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/uploads/2019/11/hero1.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/uploads/2019/11/hero2-768x523.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/themes/alerus/img/pattern.jpg 1,1,1591925452,4096 predictor::https://alerus.com/wp-content/uploads/2019/10/video_thumb-569x325.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/uploads/2019/10/cta_bg-1550x450.jpg 1,1,1591925452,4097 predictor::https://alerus.com/wp-content/themes/alerus/fonts/theserif_plain-webfont.woff 1,1,1591925452,4096 predictor::https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2 1,1,1591925452,4096 predictor::https://connect.facebook.net/en_US/fbevents.js 1,1,1591925452,4096 predictor::https://tags.tiqcdn.com/utag/advantagepublisherservices/aps/prod/utag.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps-api-v3/api/js/41/3a/common.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps-api-v3/api/js/41/3a/util.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps-api-v3/api/js/41/3a/controls.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps-api-v3/api/js/41/3a/places_impl.js 1,1,1591925452,4096 predictor::https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png 1,1,1591925452,4096 predictor::https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/wistia-mux.js 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/videoThumbnail.js 1,1,1591925452,4096 predictor::https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=1690172&url=https%3A%2F%2Falerus.com%2F&time=1591925454209 1,1,1591925452,4096 predictor::https://connect.facebook.net/signals/config/545902529281568?v=2.9.18&r=stable 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/engines/hls_video.js 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/images/blank.gif 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/overpassFontFace.js 1,1,1591925452,4096 predictor::https://fast.wistia.com/assets/external/allIntegrations.js 1,1,1591925452,4096 predictor::https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Falerus.com%2F&4sAIzaSyB_-rkp3WWvwMDJ8Xdr8UggErs4ZZacQho&callback=_xdc_._2wt03a&key=AIzaSyB_-rkp3WWvwMDJ8Xdr8UggErs4ZZacQho&token=24750 1,1,1591925452,4096 predictor::https://79442.global.siteimproveanalytics.io/heat.aspx?aid=79442&luid=29011bb9-1b28-e550-4ac0-7128c672150c&p=s%7C0%7C0&ww=1693&wh=1299&o=1&d=10&prev=1591925454548&rnd=83317 1,1,1591925452,4096 predictor::https://79442.global.siteimproveanalytics.io/heat.aspx?aid=79442&luid=29011bb9-1b28-e550-4ac0-7128c672150c&p=c%7C8%7C12%7Cdiv.container%3Ea.close&ww=1693&wh=1299&o=2&d=10&prev=1591925454548&rnd=33370 1,1,1591925452,4096   Ü

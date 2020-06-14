@@ -1,0 +1,633 @@
+<!DOCTYPE_HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.64.1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/website.css">
+<link rel="icon" href="/assets/favicon.ico">
+
+    <title> ricing arch : Maxwell J. Morgan </title>
+</head>
+<body lang="en">
+
+<body>
+  <div class="container-fluid">
+    <nav>
+  <h1>Maxwell J. Morgan</h1>
+  <li><a href=https://www.maxwelljmorgan.net>About</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/assets/MaxwellMorgan_Resume.pdf">Resume</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</nav>
+
+    <div id="content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-centered center-block">
+          <h2 class="post-header">Ricing Arch Linux - Part 1 - Window Manager</h2>
+          <p>Mon, Dec 12, 2016 &mdash; 
+          3511 words &mdash; Read in 17 min</p>
+            
+              <img class="post-pic img-rounded", src="/assets/arch-rice-mono.jpg">
+            
+            <p>So. You&rsquo;ve decided to make the switch to Arch Linux and you&rsquo;ve got your Xorg
+display configured with a little help from the
+<a href="https://wiki.archlinux.org/">Arch wiki</a>,
+but this distro doesn&rsquo;t look <strong>anything</strong> like you&rsquo;ve seen advertised!?! Or
+maybe it does and all you were expecting were a few tty&rsquo;s&hellip; <em>who am I to
+judge</em>? Anyhow, I&rsquo;m here to talk about making that barebone system into
+something you can look at in admiration. I&rsquo;m here to talk about ricing.</p>
+<p>This will be the first part of a series focusing on ricing Arch Linux, and as
+the title implies, this part is about window managers. In this tutorial series,
+I&rsquo;ll try to demystify the beutification of a Unix-based OS.</p>
+<h3 id="what-is-ricing">What is Ricing?</h3>
+<p>From the
+<a href="https://www.reddit.com/r/unixporn/wiki/themeing/dictionary#wiki_rice">/r/unixporn wiki</a>:</p>
+<blockquote>
+<p>&lsquo;Rice&rsquo; is a word that is commonly used to refer to making visual improvements
+and customizations on one&rsquo;s desktop.</p>
+</blockquote>
+<p>This is most commonly done on Unix platforms such as Linux and Mac OS / OSX
+because these operating systems are capable of using user-selected components
+of an operating system, which brings us to the next topic.</p>
+<h3 id="visual-components-of-an-operating-system">Visual Components of an Operating System</h3>
+<p>An operating system has many visual components but the following are among the
+most basic and notable and are usually the subject of ricing:</p>
+<ul>
+<li>Window Manager</li>
+<li>Terminal Emulator (ok, ok, this isn&rsquo;t REALLY necessary)</li>
+<li>Status Bar</li>
+<li>Widget / Window Theme &amp; Other Tidbits (Composition Manager, Application
+Launcher, Screen Saver, Fonts, etc.)</li>
+</ul>
+<p>I&rsquo;ve listed these elements in the order in which I&rsquo;ll discuss them in my posts,
+and I&rsquo;ll touch on each of them here briefly.</p>
+<p>A <strong>window manager</strong> configures the layout, borders, and actions of
+windows displayed on the screen. This includes, but is not limited to, where a
+window is placed when opened (relative to other windows as well as which
+virtual workspace it is placed on), the color and thickness of a window&rsquo;s
+border, which controls are used to close, enlarge, and shrink the window, as
+well as which interfaces the user can use to control the windows (keyboard
+shortcuts, mouse gestures, etc.) Some of my favorite examples of window
+managers are <a href="https://i3wm.org/">i3 Window Manager</a> and <a href="http://xmonad.org">XMonad Window Manager</a>.</p>
+<p>A <strong>terminal emulator</strong> is a progam providing the user with an interface through
+which to communicate with the computer. This is typically done with text
+input / output. The terminal also provides a home for the user&rsquo;s shell of
+choice (be it bash, zsh, fish, or another). The terminal emulator can be
+customized in many ways including changing the font style, the shell prompt,
+the color scheme, and other elements of the terminal&rsquo;s appearance. Some
+examples of terminal emulators are <a href="https://en.wikipedia.org/wiki/Rxvt">rxvt</a> and <a href="http://invisible-island.net/xterm/">xterm</a>.</p>
+<p>A <strong>status bar</strong> is where system information is diplayed: which windows are
+open, which virtual desktops are active, current time and date, network status,
+etc. Like the terminal emulator, a status bar can be configured to use custom
+font styles and special color schemes as well as display whichever system
+information the user deems fit. Some examples of status bars are <a href="https://i3wm.org/i3bar/">i3bar</a>
+(which is used in conjuction with the i3 window manager) and <a href="http://projects.haskell.org/xmobar/">xmobar</a>
+(which can be used as a standalone status bar or in conjuction with xmonad
+window manager).</p>
+<h3 id="configuring-a-window-manager-i3">Configuring a Window Manager (i3)</h3>
+<p>Configuring a window manager is often the first step to ricing a system. I&rsquo;ve
+used a few different window managers, and I find i3 to be the easiest to
+approach (unless you&rsquo;re familiar with the Haskell programming language, in
+which case, XMonad may be your cup of tea).</p>
+<p>Setting up a window manager consists of three main steps:</p>
+<ol>
+<li>Download and install the package</li>
+<li>Start the window manager</li>
+<li>Tweak the hell out of the settings until you&rsquo;re satisfied</li>
+</ol>
+<p>The third step is the most interesting but for completeness, I&rsquo;ll include the
+first two steps as well.</p>
+<h4 id="downloading-and-installing-i3-gaps">Downloading and Installing i3-gaps</h4>
+<p>The source code for i3 gaps (an unofficial but commonly used fork of the
+original i3 window manager) can be found <a href="https://github.com/Airblader/i3">here</a>. Since I&rsquo;ll be using Arch
+Linux, I&rsquo;ll download and install i3-gaps using the Arch User Repository (AUR),
+but if you&rsquo;re using something other than Arch, you can find installation
+instructions for your package manager of choice (or via manual installation)
+<a href="https://github.com/Airblader/i3/wiki/Compiling-&amp;-Installing">here</a>. I&rsquo;ll use yaourt to download and install i3-gaps like so:</p>
+<pre><code>yaourt i3-gaps-git
+</code></pre><p>yaourt should prompt you to install some basic dependencies which include
+i3bar and i3status. You should accept the recommendation because i3bar and
+i3status will provide you with a nice initial status bar (albeit one with
+default configurations) which you can modify later.</p>
+<h4 id="starting-i3-gaps-on-login">Starting i3-gaps on Login</h4>
+<p>The next step is to configure your system to start <em>i3</em>
+window manager with the X Window System. This can be done using a program
+called <em>xinit</em>. <em>xinit</em> is mainly used to execute desktop environments, window
+managers, and other programs when starting the X Server (including the X
+Window System) at the beginning of a user&rsquo;s XSession (typically after login).
+<em>xinit</em> is included in the <em>xorg-xinit</em> package and can be
+installed with the following command on Arch Linux:</p>
+<pre><code>sudo pacman -S xorg-xinit
+</code></pre><p>The <em>xinit</em> program uses a shell script to determine which window manager
+(and, possibly, other auxillery programs) to execute after starting the X
+Window System. A default shell script used by <em>xinit</em> can be found at
+<code>/etc/X11/xinit/xinitrc</code>. We&rsquo;ll examine the default shell script to
+understand what is going on under-the-hood, then we&rsquo;ll make a copy of the
+script and tailor it to our liking. Here is the default shell script:</p>
+<pre><code>/etc/X11/xinit/xinitrc
+------------------------------------------------------------------------------
+#!/bin/sh
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f &quot;$userresources&quot; ]; then
+    xrdb -merge &quot;$userresources&quot;
+fi
+
+if [ -f &quot;$usermodmap&quot; ]; then
+    xmodmap &quot;$usermodmap&quot;
+fi
+
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x &quot;$f&quot; ] &amp;&amp; . &quot;$f&quot;
+ done
+ unset f
+fi
+
+twm &amp;
+xclock -geometry 50x50-1+1 &amp;
+xterm -geometry 80x50+494+51 &amp;
+xterm -geometry 80x20+494-0 &amp;
+exec xterm -geometry 80x66+0+0 -name login
+</code></pre><p>We&rsquo;ll break the script down into two pieces. The first piece:</p>
+<pre><code>userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f &quot;$userresources&quot; ]; then
+    xrdb -merge &quot;$userresources&quot;
+fi
+
+if [ -f &quot;$usermodmap&quot; ]; then
+    xmodmap &quot;$usermodmap&quot;
+fi
+</code></pre><p>This portion of the shell script checks to see if there are any system-wide or
+user-specific configuration files for X resources (configuration parameters
+used by X client applications). If such configuration files exist, the
+configurations are merged into the existing configurations. The shell script
+also checks to see if there are any system-wide or user-specific xmodmap
+configuration files. These files are used by the xmodmap program to modify
+key mappings and pointer button mappings. <em><strong>You don&rsquo;t have to worry about these
+configuration files just yet, they will be covered in more depth in the post
+regarding customization of the terminal emulator</strong></em></p>
+<p>The second piece:</p>
+<pre><code># start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x &quot;$f&quot; ] &amp;&amp; . &quot;$f&quot;
+ done
+ unset f
+fi
+
+twm &amp;
+xclock -geometry 50x50-1+1 &amp;
+xterm -geometry 80x50+494+51 &amp;
+xterm -geometry 80x20+494-0 &amp;
+exec xterm -geometry 80x66+0+0 -name login
+</code></pre><p>This portion of the shell script is responsible for starting all programs
+needed after the X Window System is started. It checks if any executable shell
+scripts exist in <code>/etc/X11/xinit/xinitrc.d/</code> and if so, it will execute those
+scripts. It then launches <em>twm</em> (tabbed window manager), xclock, and three
+instances of xterm.</p>
+<p><em><strong>It is important to note</strong></em>: the last instance of xterm
+invoked is done so using the exec command rather than launching it in the
+background (using &amp;) like the others. The X Window System is a group of
+child processes whose parent is the <em>xinit</em> program. Therefore, if the <em>xinit</em>
+program exits, so will the X Window System (bye, bye, GUI). By calling exec on
+the last instance of xterm, the shell script&rsquo;s process will be passed to xterm
+instead and the X Window System will not exit unless the xterm process
+is killed.</p>
+<p>Now that we understand what <em>xinit</em> is doing under-the-hood, we can begin to
+alter the <em>xinitrc</em> shell script to do what we want. Namely, we&rsquo;d like to
+launch the i3-gaps window manager instead of <em>twm</em>.</p>
+<p>First, we&rsquo;ll copy the default config to the user-specific configuration
+directory, <code>~/.xinitrc</code>.</p>
+<pre><code>cp /etc/X11/xinit/xinitrc ~/.xinitrc
+</code></pre><p>Then we&rsquo;ll remove the last 5 lines of the default configuration and add
+<code>exec i3-gaps</code> instead, like so:</p>
+<pre><code>/etc/X11/xinit/xinitrc
+------------------------------------------------------------------------------
+#!/bin/sh
+
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f &quot;$userresources&quot; ]; then
+    xrdb -merge &quot;$userresources&quot;
+fi
+
+if [ -f &quot;$usermodmap&quot; ]; then
+    xmodmap &quot;$usermodmap&quot;
+fi
+
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x &quot;$f&quot; ] &amp;&amp; . &quot;$f&quot;
+ done
+ unset f
+fi
+
+exec i3-gaps
+</code></pre><p><em><strong>Note that we&rsquo;ve now replaced the</strong></em> <code>exec xterm</code> <em><strong>with</strong></em> <code>exec i3-gaps</code>,
+<em><strong>therefore, if the i3-gaps window manager exits, then so will the X Window
+System.</strong></em></p>
+<p>If you&rsquo;ve done everything up to this step, when you log into a tty after
+booting Arch, you should be greeted by an X Window System running the i3-gaps
+window manager, i3bar (shows virtual desktops, is interactive), and i3status
+(shows system information)! Hurray!</p>
+<h4 id="tweaking-i3-gaps-config">Tweaking i3-gaps Config</h4>
+<p>The i3-gaps window manager (if being run for the first
+time) will prompt you with a brief configuration wizard asking you which key
+you&rsquo;d like to use as your Mod key. The Mod key is just a special key used for
+key bindings. Many people set it to the Windows key or the Command key (Apple).</p>
+<p>Something you might want to know right away is that the default key binding
+for launching a terminal in i3 is Mod+Enter.</p>
+<p>The configuration wizard will also copy the global configuration file
+from <code>/etc/i3/config</code> to <code>~/.config/i3/config</code> and this is where all your
+user-specific changes will be made.</p>
+<p>We can see the file here:</p>
+<pre><code>~/.config/i3/config
+-------------------------------------------------------------------------------
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 8
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
+
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesnâ€™t scale on retina/hidpi displays.
+
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $up l
+set $down k
+set $left j
+set $right semicolon
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec &quot;i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'&quot;
+
+# resize window (you can also use the mouse for that)
+mode &quot;resize&quot; {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the windowâ€™s width.
+        # Pressing right will grow the windowâ€™s width.
+        # Pressing up will shrink the windowâ€™s height.
+        # Pressing down will grow the windowâ€™s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode &quot;default&quot;
+        bindsym Escape mode &quot;default&quot;
+}
+
+bindsym $mod+r mode &quot;resize&quot;
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+}
+</code></pre><p>The i3 configuration file and commands are very readable and the default
+configuration generated has some useful comments. Some immediate things to
+point out are the <code>bindsym</code> and <code>set</code> commands.</p>
+<p>The <code>bindsym</code> command binds a particular key combination to an i3 command. One
+example is <code>bindsym $mod+r mode &quot;resize&quot;</code> which binds the Mod+r key
+combination to resize mode. In resize mode, you can resize the current
+window in focus using <code>j</code> (shrink width), <code>k</code> (grow height), <code>l</code> (shrink height),
+or <code>;</code> (grow width). You can then exit resize mode with the escape key.</p>
+<p>The <code>set</code> command sets i3 variables to particular values. These values can be
+other i3 variables, i3 key codes, or literal values. An example is <code>set $left  j</code> which
+sets the variable <code>left</code> to the <code>j</code> key. As you may have noticed, i3 variables
+are always prefixed with the <code>$</code> symbol, even when being set. Similar to the
+example you could say <code>set $ws1 &quot;Workspace #1&quot;</code> in order to set the variable
+<code>ws1</code> to the literal <code>&quot;Workspace #1&quot;</code>.</p>
+<p>When changes are made to the configuration file, you can check the changes
+take effect by using the restart command in i3 which is bound to Mod+Shift+r.</p>
+<p>We can use the <code>set</code> command to define names for our workspaces to
+avoid typing the literal names more than once. This can be done by the
+following:</p>
+<pre><code># set variables for workspace titles
+set $ws1 &quot;1&quot;
+set $ws2 &quot;2&quot;
+set $ws3 &quot;3&quot;
+set $ws4 &quot;4&quot;
+set $ws5 &quot;5&quot;
+set $ws6 &quot;6&quot;
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+</code></pre><p>Now whenever we would like to change the title of a workspace, we can do it
+in just one place and have it take effect everywhere.</p>
+<p><em><strong>Note: When changing the workspace names, you may experience strange
+behavior after an i3 restart such as the old workspace persisting. To correct
+these issues, simply exit i3 (and your X Session) by using the Mod+Shift+q key
+combination and restart it (log back in).</strong></em></p>
+<h4 id="using-x-server-properties-in-i3">Using X Server Properties in i3</h4>
+<p>When a program is started, it is responsible for setting display window and
+font properties in an X Server. These properties can be used by window managers
+to define specific actions for a group of application windows during an event
+(i.e. window opening, connecting an external monitor, etc.) For instance, you can
+set your i3 config to always place google chrome on workspace 4. In order to do
+this though, we&rsquo;ll have to know the X Server properties of a window. To find
+these properties, we can use a program called <em>xprop</em>. In Arch Linux, xprop is
+part of the xorg-utils package (<code>sudo pacman -S xorg-utils</code>). In order to see
+the properties of a program&rsquo;s window, first open the program, then in a
+terminal run <code>xprop</code>. The cursor should turn into a cross hair and you should
+click on the window for which you would like to see the properties. After
+clicking on the window, output similar to the following should print to the
+terminal where you launched the xprop program:</p>
+<pre><code>XdndTypeList(ATOM) = STRING, UTF8_STRING, text/plain, text/x-moz-url, TEXT, _NETSCAPE_URL, chromium/x-renderer-taint, text/html
+_NET_WM_DESKTOP(CARDINAL) = 3
+WM_STATE(WM_STATE):
+                window state: Normal
+                icon window: 0x0
+_NET_WM_USER_TIME(CARDINAL) = 22313078
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+                program specified location: 14, 35
+                program specified minimum size: 771 by 92
+WM_NAME(UTF8_STRING) = &quot;ricing arch : Maxwell J. Morgan - Google Chrome&quot;
+_NET_WM_NAME(UTF8_STRING) = &quot;ricing arch : Maxwell J. Morgan - Google Chrome&quot;
+XdndAware(ATOM) = BITMAP
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x2, 0x0, 0x1, 0x0, 0x0
+
+WM_WINDOW_ROLE(STRING) = &quot;browser&quot;
+WM_CLASS(STRING) = &quot;google-chrome&quot;, &quot;Google-chrome&quot;
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_NET_WM_PID(CARDINAL) = 758
+WM_LOCALE_NAME(STRING) = &quot;en_US.UTF-8&quot;
+WM_CLIENT_MACHINE(STRING) = &quot;ArchTop&quot;
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW, _NET_WM_PING
+</code></pre><p>The most useful property when configuring i3 will be the window class which is
+specified as the second value of WM_CLASS(STRING). In the above output, we can
+see google chrome&rsquo;s window class property is &lsquo;Google-chrome&rsquo;.</p>
+<p>In order to specify that google chrome should always open on workspace 4 we can
+use i3&rsquo;s <code>assign</code> command like so:</p>
+<pre><code>assign [class=&quot;Google-chrome&quot;] $ws4
+</code></pre><p>Now, all instances of google chrome should open on workspace 4!</p>
+<h4 id="setting-gaps-in-i3-gaps">Setting Gaps in i3-gaps</h4>
+<p>i3-gaps will not automatically configure the gaps between windows for you so
+in order to do so, you must remove the window borders and specify a gap size.
+This can be done by adding the following lines to the end of your
+configuration file:</p>
+<pre><code># i3 gaps specific stuff below #
+
+# disable borders
+for_window [class=&quot;^.*&quot;] border pixel 0
+
+gaps inner 15  # gap size in pixels
+</code></pre><h3 id="wrapping-things-up">Wrapping Things Up</h3>
+<p>I hope I shed a bit of light on the art of ricing and more specifically how to
+get up and running with a window manager. Even though I specifically covered
+i3, most window managers are installed similarly though the configuration
+syntax will most likely differ. It&rsquo;s all really a matter of
+packages, configuration files, and shell scripts. The hardest part is knowing
+where all the files live, the configuration syntax, and working out the kinks!</p>
+<p>I barely scratched the surface of what you can do with i3 and with a riced
+system in general. I plan on writing more posts in the future covering the
+various other visual components of an operating system including terminal
+emulators (and X resources in general), status bars, widget themes, and other
+tidbits like composition managers, application launchers, etc.</p>
+<p>I hope you&rsquo;ll explore more operating system customizations! Here are some extra
+resources to keep you going:</p>
+<ul>
+<li><a href="https://i3wm.org/docs/userguide.html">i3 Window Manager Documentation</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/window_manager">Window Manager Wiki Article</a></li>
+<li><a href="https://www.reddit.com/r/unixporn/wiki/index">Unix Porn Wiki</a></li>
+<li><a href="https://github.com/mjmor/dot">My dotfile repo</a></li>
+</ul>
+<p>And here&rsquo;s the shameless plug to the unix porn reddit community which inspired
+me to get into ricing in the first place:</p>
+<ul>
+<li><a href="https://www.reddit.com/r/unixporn/">Unix Porn Community</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-centered center-block">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'mjmor';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+    <ul>
+        <li>&copy; 2016 Maxwell J. Morgan</li>
+        <li><a href="/contact/">Contact</a></li>
+    </ul>
+</footer>
+
+  </div>
+</body>
+Ú²7‹x      ^ÛÌ‰^ÛÌŠAÀ?-^å	   1    :https://www.maxwelljmorgan.net/blog/ricing-arch/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/2 200 OK
+server: nginx
+date: Sat, 06 Jun 2020 17:04:09 GMT
+content-type: text/html
+content-length: 28259
+last-modified: Fri, 28 Feb 2020 05:30:19 GMT
+etag: "5e58a56b-6e63"
+strict-transport-security: max-age=15768000
+accept-ranges: bytes
+X-Firefox-Spdy: h2
+ original-response-headers server: nginx
+date: Sat, 06 Jun 2020 17:04:09 GMT
+content-type: text/html
+content-length: 28259
+last-modified: Fri, 28 Feb 2020 05:30:19 GMT
+etag: "5e58a56b-6e63"
+strict-transport-security: max-age=15768000
+accept-ranges: bytes
+X-Firefox-Spdy: h2
+ ctid 1 uncompressed-len 0 net-response-time-onstart 91 net-response-time-onstop 94 predictor::resource-count 5 predictor::https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css 1,1,1591463049,4096 predictor::https://www.maxwelljmorgan.net/css/website.css 1,1,1591463049,4097 predictor::https://www.maxwelljmorgan.net/assets/arch-rice-mono.jpg 1,1,1591463049,4097 predictor::https://mjmor.disqus.com/embed.js 1,1,1591463049,4096 predictor::https://c.disquscdn.com/next/embed/alfie.f51946af45e0b561c60f768335c9eb79.js 1,1,1591463049,4096   nc
