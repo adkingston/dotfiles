@@ -1,7 +1,0 @@
-http:pandas.pydata.org:80:.:	0	18289	http:pandas.pydata.org:80:pandas.pydata.org:443::n:1580171301:h2:y:1580165892:n::http://pandas.pydata.org|n:n:
-http:button.flattr.com:80:.:	0	18330	http:button.flattr.com:80:button.flattr.com:443::n:1583787905:h2:y:1583630870:n::http://detexify.kirelabs.org|n:n:
-http:seaborn.pydata.org:80:.:	0	18289	http:seaborn.pydata.org:80:seaborn.pydata.org:443::n:1580171941:h2:y:1580165892:n::http://localhost:11005|n:n:
-http:api.flattr.com:80:.:	0	18330	http:api.flattr.com:80:api.flattr.com:443::n:1583787904:h2:y:1583630870:n::http://detexify.kirelabs.org|n:n:
-http:gttp.co:80:.:	0	18330	http:gttp.co:80:gttp.co:443::n:1583787902:h2:y:1583630870:n::http://detexify.kirelabs.org|n:n:
-http:www.analyticbridge.datasciencecentral.com:80:.:	0	18340	http:www.analyticbridge.datasciencecentral.com:80:www.analyticbridge.datasciencecentral.com:443::n:1584652323:h2:y:1584649758:n::http://www.analyticbridge.datasciencecentral.com|n:n:
-http:dxas.minis-reute.de:80:.:	0	18293	http:dxas.minis-reute.de:80:dxas.minis-reute.de:443::n:1580572886:h2:y:1580568856:n::https://www.google.com|n:n:
