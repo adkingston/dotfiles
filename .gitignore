@@ -1,5 +1,6 @@
+docker/*
+mbsync/*
 ranger/ranger
-.*
 pulse
 mozilla
 npm
@@ -8,3 +9,12 @@ yay
 w3m
 npm
 fzf
+coc/*
+GIMP/*
+VirtualBox/*
+gtk*/*
+spotify/*
+systemd/*
+vlc/*
+neomutt/*
+zsh/oh-my-zsh

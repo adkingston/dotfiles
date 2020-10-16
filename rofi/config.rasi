@@ -10,5 +10,5 @@ separator-style:       ",";
 hide-scrollbar:        true;
 line-margin:           0;
 font:                  "sans-serif 10";
-theme:"nord.rasi";
+theme:"gruvbox.rasi";
 }

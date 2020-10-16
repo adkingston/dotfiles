@@ -3,7 +3,8 @@ let g:python3_host_prog = '/usr/bin/python3.8'
 
 call plug#begin(stdpath('data').'/plugged')
 " color
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 
 " gui control
 Plug 'webdevel/tabulous'
@@ -70,10 +71,10 @@ call neomake#configure#automake('w')
 "---------------------------------------------------------------------------------------------------
 "   " color scheme
 "---------------------------------------------------------------------------------------------------
-"set termguicolors 
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme nord
-"hi Normal guibg=NONE ctermbg=NONE
+set termguicolors 
+let $NVIM_TUI_ENABE_TRUE_COLOR=1
+colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 
 "---------------------------------------------------------------------------------------------------
